@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IKS Paper 3 — Complete Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --saffron:#C8520A;--saffron-light:#FFF3E8;--saffron-mid:#FBDAB8;
+  --green:#1A6B3C;--green-light:#E8F5EE;--green-mid:#B5D9C5;
+  --blue:#1A3B6B;--blue-light:#E8EEF5;--blue-mid:#B5C8DA;
+  --maroon:#7B1C2E;--maroon-light:#F5E8EB;--maroon-mid:#DDB5BC;
+  --purple:#4A1C6B;--purple-light:#EEE8F5;--purple-mid:#C8B5DA;
+  --gold:#8B6914;--gold-light:#FBF5D8;--gold-mid:#E8D98C;
+  --teal:#0D5C63;--teal-light:#E0F5F7;--teal-mid:#9AD5DA;
+  --ink:#1C1108;--ink2:#3D2B0A;--ink3:#6B5035;
+  --paper:#FEFCF8;--paper2:#F5F0E8;--paper3:#EDE5D5;
+  --border:#D4C5A8;--r:8px;--r2:12px;--r3:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:15px}
+
+/* NAV */
+.top-nav{position:sticky;top:0;z-index:100;background:var(--ink);padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;box-shadow:0 2px 14px rgba(0,0,0,.5)}
+.top-nav a{color:#FFC97A;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;text-decoration:none;padding:4px 10px;border:1px solid rgba(255,255,255,.15);border-radius:20px;white-space:nowrap;transition:all .2s}
+.top-nav a:hover{background:var(--saffron);border-color:var(--saffron);color:#fff}
+.nav-title{color:#fff;font-family:'Playfair Display',serif;font-size:12px;margin-right:6px;opacity:.9}
+
+/* COVER */
+.cover{background:linear-gradient(135deg,var(--ink) 0%,#3D1A00 55%,var(--maroon) 100%);padding:60px 24px 50px;text-align:center;position:relative;overflow:hidden}
+.cover::before{content:'ॐ';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:280px;opacity:.04;color:#fff;pointer-events:none}
+.cover-tag{display:inline-block;background:var(--saffron);color:#fff;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:5px 14px;border-radius:20px;letter-spacing:.1em;margin-bottom:16px;text-transform:uppercase}
+.cover h1{font-family:'Playfair Display',serif;font-size:clamp(24px,5vw,40px);color:#fff;font-weight:900;line-height:1.2;margin-bottom:10px}
+.cover h1 span{color:#FFC97A}
+.cover p{color:rgba(255,255,255,.7);font-size:13px;max-width:500px;margin:0 auto 20px}
+.cover-units{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.cu{background:rgba(255,255,255,.1);color:#FFC97A;border:1px solid rgba(255,201,122,.3);border-radius:20px;padding:4px 12px;font-size:11px;font-family:'JetBrains Mono',monospace}
+
+/* UNIT WRAPPER */
+.unit-section{padding:36px 20px;max-width:880px;margin:0 auto;border-bottom:2px solid var(--border)}
+.unit-section:last-child{border-bottom:none}
+
+.unit-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:26px;padding:18px 20px;border-radius:var(--r2);border-left:5px solid}
+.unit-header .unit-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:900;line-height:1;opacity:.25;min-width:48px}
+.unit-header h2{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;margin-bottom:4px}
+.unit-header p{font-size:12.5px;opacity:.7;font-style:italic}
+
+.u1a .unit-header{background:var(--saffron-light);border-color:var(--saffron)}.u1a .unit-header h2{color:var(--saffron)}
+.u1b .unit-header{background:var(--green-light);border-color:var(--green)}.u1b .unit-header h2{color:var(--green)}
+.u2  .unit-header{background:var(--blue-light);border-color:var(--blue)}.u2 .unit-header h2{color:var(--blue)}
+.u3  .unit-header{background:var(--maroon-light);border-color:var(--maroon)}.u3 .unit-header h2{color:var(--maroon)}
+.u4a .unit-header{background:var(--purple-light);border-color:var(--purple)}.u4a .unit-header h2{color:var(--purple)}
+.u4b .unit-header{background:var(--gold-light);border-color:var(--gold)}.u4b .unit-header h2{color:var(--gold)}
+.u5a .unit-header{background:var(--green-light);border-color:var(--green)}.u5a .unit-header h2{color:var(--green)}
+.u5b .unit-header{background:var(--blue-light);border-color:var(--blue)}.u5b .unit-header h2{color:var(--blue)}
+
+/* SECTION DIVIDERS */
+.sec-div{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 13px;border-radius:20px;display:inline-block;margin:20px 0 10px}
+
+/* HIGHLIGHTS */
+.hl{border-radius:var(--r2);padding:13px 17px;margin:12px 0;border-left:4px solid;font-size:13.5px;line-height:1.65}
+.hl.saffron{background:var(--saffron-light);border-color:var(--saffron)}
+.hl.green{background:var(--green-light);border-color:var(--green)}
+.hl.blue{background:var(--blue-light);border-color:var(--blue)}
+.hl.maroon{background:var(--maroon-light);border-color:var(--maroon)}
+.hl.purple{background:var(--purple-light);border-color:var(--purple)}
+.hl.gold{background:var(--gold-light);border-color:var(--gold)}
+.hl.teal{background:var(--teal-light);border-color:var(--teal)}
+.hl-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;opacity:.65}
+
+/* SHLOKA */
+.shloka{font-family:'Source Serif 4',serif;font-size:13px;background:rgba(0,0,0,.04);padding:10px 14px;border-radius:var(--r);margin-top:8px;line-height:2;word-break:break-word;border-left:3px solid rgba(0,0,0,.1)}
+.shloka .iast{font-style:italic;font-size:12px;display:block;margin-top:4px;opacity:.8}
+.shloka .ref{font-family:'JetBrains Mono',monospace;font-size:10px;display:block;margin-top:3px;opacity:.55}
+
+/* TABLES */
+.gt{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;border-radius:var(--r2);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.gt th{padding:9px 13px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.gt td{padding:8px 13px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55}
+.gt tr:last-child td{border-bottom:none}
+.gt tr:nth-child(even) td{background:rgba(0,0,0,.018)}
+.th-s th{background:var(--saffron);color:#fff}.th-g th{background:var(--green);color:#fff}.th-b th{background:var(--blue);color:#fff}.th-m th{background:var(--maroon);color:#fff}.th-p th{background:var(--purple);color:#fff}.th-gold th{background:var(--gold);color:#fff}.th-t th{background:var(--teal);color:#fff}
+
+/* BULLETS */
+.blist{list-style:none;display:grid;gap:5px;margin:10px 0}
+.blist li{padding:7px 12px 7px 28px;position:relative;background:#fff;border-radius:var(--r);border:1px solid var(--paper3);font-size:13.5px;line-height:1.55}
+.blist li::before{content:'▸';position:absolute;left:9px;opacity:.45;color:var(--ink2);font-size:13px}
+.blist li strong{font-weight:600}
+.blist li em{font-style:italic;opacity:.72;font-size:13px}
+
+/* FLOWCHART */
+.fc{background:var(--paper2);border:1.5px solid var(--border);border-radius:var(--r2);padding:18px;margin:14px 0;overflow-x:auto}
+.fc-title{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;color:var(--ink3)}
+.fc-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.fc-box{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:7px 11px;font-size:12.5px;font-weight:600;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.fc-arrow{color:var(--ink3);font-size:17px;flex-shrink:0}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.fc-parent{border-radius:var(--r);padding:8px 13px;font-size:13px;font-weight:600;text-align:center;color:#fff}
+.fc-children{border-left:2px solid var(--border);padding-left:10px;margin-top:6px;display:flex;flex-direction:column;gap:5px}
+.fc-child{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:6px 10px;font-size:12px}
+.fc-child strong{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;opacity:.55;margin-bottom:1px}
+
+/* VEDA CARDS */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin:14px 0}
+.vcard{border-radius:var(--r2);padding:14px;border:1.5px solid}
+.vcard h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;margin-bottom:7px}
+.vcard ul{list-style:none;font-size:12px;display:grid;gap:3px}
+.vcard ul li{padding-left:12px;position:relative;line-height:1.45}
+.vcard ul li::before{content:'·';position:absolute;left:3px;font-size:15px;line-height:1}
+
+/* BODY DIAGRAM */
+.bdiag{display:flex;flex-direction:column;align-items:center;margin:14px 0}
+.bdiag-inner{width:100%;max-width:400px}
+.bd-part{padding:10px 14px;text-align:center;font-size:12.5px;border:1.5px solid}
+.bd-part:first-child{border-radius:var(--r2) var(--r2) 0 0}
+.bd-part:last-child{border-radius:0 0 var(--r2) var(--r2)}
+.bd-part:not(:first-child){border-top:none}
+.bd-part strong{display:block;font-size:10.5px;font-family:'JetBrains Mono',monospace;opacity:.55;margin-bottom:2px}
+.bd-icon{font-size:20px;margin-bottom:3px}
+
+/* MAHAVAKYA */
+.mv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin:12px 0}
+.mv-card{border-radius:var(--r2);padding:14px;text-align:center;border:1.5px solid}
+.mv-text{font-family:'Playfair Display',serif;font-size:14px;font-style:italic;font-weight:700;margin-bottom:5px;line-height:1.3}
+.mv-devanagari{font-size:15px;margin-bottom:3px;line-height:1.5}
+.mv-meaning{font-size:12px;opacity:.72;margin-bottom:4px}
+.mv-source{font-family:'JetBrains Mono',monospace;font-size:10px;opacity:.55}
+
+/* UPANISHAD TABLE */
+.up-table{display:grid;gap:5px;margin:12px 0}
+.up-row{display:grid;grid-template-columns:160px 130px 1fr;gap:10px;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:9px 12px;align-items:start;font-size:13px;line-height:1.5}
+.up-row.header{background:var(--maroon);color:#fff;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.04em;border-color:var(--maroon)}
+.up-name{font-weight:600;color:var(--maroon)}
+.up-name .devanagari{display:block;font-size:12px;color:var(--ink3);font-weight:400}
+.up-veda{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink3)}
+
+/* UP DETAIL CARDS (Shlokas per Upanishad) */
+.upd-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:15px;margin-bottom:10px}
+.upd-header{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.upd-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--maroon)}
+.upd-veda{font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--maroon-light);color:var(--maroon);padding:3px 9px;border-radius:20px}
+.upd-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px;margin-bottom:10px}
+.upd-fact{background:var(--paper2);border-radius:var(--r);padding:6px 10px;font-size:12px}
+.upd-fact strong{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;opacity:.55;margin-bottom:1px}
+
+/* PURANA GRID */
+.pur-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:7px;margin:12px 0}
+.pur-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;font-size:12.5px}
+.pur-card .pname{font-weight:700;font-size:13px;margin-bottom:3px}
+.pur-card .ptag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 7px;border-radius:10px;display:inline-block;margin-bottom:4px}
+.tag-sat{background:var(--saffron-mid);color:#6A2C00}
+.tag-raj{background:var(--gold-mid);color:#4A3000}
+.tag-tam{background:#DDD;color:#444}
+
+/* SMRITI */
+.sm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:7px;margin:12px 0}
+.sm-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:10px 12px;font-size:12.5px;line-height:1.55}
+.sm-card .sname{font-weight:700;color:var(--green);margin-bottom:3px;font-size:13px}
+.sm-card .sauthor{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink3);margin-bottom:4px}
+
+/* SAPTANGA */
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:12px 0}
+.sp-elem{border-radius:var(--r2);padding:11px;text-align:center;font-size:12.5px}
+.sp-elem .sp-icon{font-size:22px;margin-bottom:4px;display:block}
+.sp-elem strong{display:block;font-weight:700;margin-bottom:2px}
+.sp-elem span{font-size:11px;opacity:.65}
+
+/* PANCHATANTRA */
+.pt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:8px;margin:12px 0}
+.pt-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:11px;font-size:12.5px}
+.pt-card .ptnum{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);font-weight:600;margin-bottom:3px}
+.pt-card .ptname{font-weight:700;font-size:13px;margin-bottom:4px;color:var(--blue)}
+
+/* RESPONSIVE */
+@media(max-width:580px){
+  .up-row{grid-template-columns:1fr 1fr}.up-row div:last-child{grid-column:span 2}
+  .fc-row{flex-direction:column;align-items:flex-start}
+}
+@media print{.top-nav{display:none}.unit-section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <span class="nav-title">IKS · Paper 3</span>
+  <a href="#u1a">1A Vedas</a><a href="#u1b">1B Upavedas</a><a href="#u2">2 Vedāṅgas</a>
+  <a href="#u3">3 Upaniṣads</a><a href="#u4a">4A Purāṇas</a><a href="#u4b">4B Upapurāṇas</a>
+  <a href="#u5a">5A Smṛtis</a><a href="#u5b">5B Nīti</a>
+</nav>
+
+<div class="cover">
+  <div class="cover-tag">MA IKS · Semester 2 · Paper 3 · Indian Literature</div>
+  <h1>Complete Study Guide<br><span>All Units · All Answers</span></h1>
+  <p>Unit-wise flowcharts, diagrams, Devanāgarī ślokas, IAST diacritics — every Q&A covered</p>
+  <div class="cover-units">
+    <span class="cu">1A · Vedas</span><span class="cu">1B · Upavedas</span>
+    <span class="cu">2 · Vedāṅgas</span><span class="cu">3 · Daśopaniṣads</span>
+    <span class="cu">4A · Mahāpurāṇas</span><span class="cu">4B · Upapurāṇas</span>
+    <span class="cu">5A · Smṛtis</span><span class="cu">5B · Nītiśāstra</span>
+  </div>
+</div>
+
+<!-- ══════════════════ UNIT 1A: VEDAS ══════════════════ -->
+<div class="unit-section u1a" id="u1a">
+  <div class="unit-header">
+    <div class="unit-num">1A</div>
+    <div><h2>The Vedas (वेदाः · Vedāḥ)</h2>
+    <p>Origin · Structure · Four Vedas · Brāhmaṇas · Dialogue Hymns · Key Sūktas</p></div>
+  </div>
+
+  <div class="hl saffron">
+    <div class="hl-label">Core Definition + Apaurūṣeyatva</div>
+    <p><strong>Veda</strong> = root <em>Vid</em> + suffix <em>Ghan</em> = <strong>Knowledge</strong> (transcendental knowledge of Dharma). Vedas are <strong>Apauruṣeya</strong> — not authored by any human. Sages were Mantra-draṣṭāraḥ (seers, not creators). God revealed Vedas at the beginning of creation. Established by Mīmāṃsā philosophy.</p>
+    <div class="shloka">विद् ज्ञाने धातोः घञ् — वेद = 'यो वेदयति धर्मादीन् स वेदः'
+<span class="iast">Vid jñāne dhātoḥ ghaña — Veda = that which reveals Dharma</span>
+<span class="ref">Ṛkprātiśākhya · Sāyaṇācārya</span></div>
+    <div class="shloka" style="margin-top:6px">मन्त्रब्राह्मणयोर्वेद नामधेयम् — (Apastamba) Veda = Mantras + Brāhmaṇas together</div>
+  </div>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Overview — Four Vedas (चत्वारो वेदाः)</div>
+
+  <div class="vgrid">
+    <div class="vcard" style="background:var(--saffron-light);border-color:var(--saffron)">
+      <h4 style="color:var(--saffron)">ऋग्वेद · Ṛgveda</h4>
+      <ul>
+        <li>Subject: <strong>Knowledge/Praise</strong> (Śāstram)</li>
+        <li>Priest: <strong>Hotā</strong></li>
+        <li>10 Maṇḍalas · 1028 Sūktas</li>
+        <li>10,552 Mantras</li>
+        <li>Śākhās: Śākala, Bāṣkala</li>
+        <li>Brāhmaṇas: Aitareya, Kauṣītaki</li>
+        <li>Top deities: Indra (250), Agni (200), Soma (9th Maṇḍala)</li>
+      </ul>
+    </div>
+    <div class="vcard" style="background:var(--blue-light);border-color:var(--blue)">
+      <h4 style="color:var(--blue)">यजुर्वेद · Yajurveda</h4>
+      <ul>
+        <li>Subject: <strong>Ritual Procedures</strong> (prose mantras)</li>
+        <li>Priest: <strong>Adhvaryu</strong></li>
+        <li>Śukla (Āditya): Mādhyandina, Kāṇva</li>
+        <li>Kṛṣṇa (Brahma): Taittirīya, Maitrāyaṇī, Kaṭhaka</li>
+        <li>Śatapatha Brāhmaṇa (largest)</li>
+        <li>Īśā Upaniṣad = 40th chapter</li>
+        <li>Vajasaneyī Saṃhitā = Śukla name</li>
+      </ul>
+    </div>
+    <div class="vcard" style="background:var(--green-light);border-color:var(--green)">
+      <h4 style="color:var(--green)">सामवेद · Sāmaveda</h4>
+      <ul>
+        <li>Subject: <strong>Music/Song</strong> (Sāma = Gīta)</li>
+        <li>Priest: <strong>Udgātā</strong></li>
+        <li>Śākhās: Kauthuma, Rāṇāyanīya, Jaiminīya</li>
+        <li>Parts: Pūrvārcika + Uttarārcika</li>
+        <li>Most mantras from Ṛgveda</li>
+        <li>7 musical notes origin (Sa Re Ga…)</li>
+        <li>Chāndogya Upaniṣad</li>
+        <li>Tāṇḍya Mahā Brāhmaṇa (Pañcaviṃśa)</li>
+      </ul>
+    </div>
+    <div class="vcard" style="background:var(--maroon-light);border-color:var(--maroon)">
+      <h4 style="color:var(--maroon)">अथर्ववेद · Atharvaveda</h4>
+      <ul>
+        <li>Subject: <strong>Medicine, Magic, Nation-building</strong></li>
+        <li>Priest: <strong>Brahmā</strong> (Superintendent)</li>
+        <li>Also: Brahmaveda, Bhaijājyaveda, Kṣatraveda, Chandoveda, Aṅgiroveda</li>
+        <li>Śākhās: Śaunaka, Pippalāda</li>
+        <li>20 Kāṇḍas</li>
+        <li>Gopatha Brāhmaṇa (only Brāhmaṇa)</li>
+        <li>Muṇḍaka, Praśna, Māṇḍūkya Upaniṣads</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Vedatrayī vs Caturveda</div>
+  <div class="fc">
+    <div class="fc-title">Why Atharvaveda excluded from Vedatrayī?</div>
+    <div class="fc-row">
+      <div class="fc-box" style="background:var(--saffron-light)">Ṛgveda<br><em style="font-size:10px;font-weight:400">Poetic / śloka</em></div>
+      <div class="fc-arrow">+</div>
+      <div class="fc-box" style="background:var(--blue-light)">Yajurveda<br><em style="font-size:10px;font-weight:400">Prose / gadya</em></div>
+      <div class="fc-arrow">+</div>
+      <div class="fc-box" style="background:var(--green-light)">Sāmaveda<br><em style="font-size:10px;font-weight:400">Musical / gīta</em></div>
+      <div class="fc-arrow">=</div>
+      <div class="fc-box" style="border-color:var(--saffron);border-width:2px">VEDATRAYĪ<br><em style="font-size:10px;font-weight:400">Used in Yajñas</em></div>
+    </div>
+    <p style="font-size:12.5px;margin-top:10px;color:var(--ink3)">▸ Atharvaveda deals with worldly subjects (medicine, magic, polity) — got Veda status later. All four together = <strong>Caturveda</strong>.</p>
+  </div>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Ṛgveda — Two Classification Systems</div>
+  <div class="fc">
+    <div class="fc-title">Aṣṭaka System vs Maṇḍala System</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div>
+        <div class="fc-parent" style="background:#888">Aṣṭaka System</div>
+        <div class="fc-children">
+          <div class="fc-child"><strong>Aṣṭakas</strong>8</div>
+          <div class="fc-child"><strong>Adhyāyas</strong>64</div>
+          <div class="fc-child"><strong>Vargas</strong>2,016</div>
+        </div>
+      </div>
+      <div>
+        <div class="fc-parent" style="background:var(--saffron)">Maṇḍala System ✓ (widely used)</div>
+        <div class="fc-children">
+          <div class="fc-child"><strong>Maṇḍalas</strong>10</div>
+          <div class="fc-child"><strong>Anuvākas</strong>85</div>
+          <div class="fc-child"><strong>Sūktas</strong>1028</div>
+          <div class="fc-child"><strong>Mantras</strong>10,552</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;margin-top:10px;color:var(--ink3)">▸ Maṇḍalas 2–7 = Vaṃśamaṇḍalas (Family Books) — oldest core ▸ Maṇḍalas 1 & 10 = later additions</p>
+  </div>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Key Sūktas (Important for all mark questions)</div>
+  <table class="gt th-s">
+    <thead><tr><th>Sūkta</th><th>Location</th><th>Key Content</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Puruṣa Sūkta</strong></td><td>10.90</td><td>Cosmic Virāṭ Puruṣa (1000 heads). Universe created from cosmic sacrifice. Origin of 4 Varṇas: "Brāhmaṇo'sya mukhamāsīt…" Foundational Vedānta root.</td></tr>
+      <tr><td><strong>Nāsadīya Sūkta</strong></td><td>10.129</td><td>"There was neither non-existence nor existence then." State before creation. First seed of monotheism and Advaita philosophy.</td></tr>
+      <tr><td><strong>Hiraṇyagarbha Sūkta</strong></td><td>10.121</td><td>Prajāpati as primary cause. "To which god shall we offer oblation?" — earliest monotheism.</td></tr>
+      <tr><td><strong>Bhūmi Sūkta (AV)</strong></td><td>AV 12.1</td><td>"Mātā bhūmiḥ putro'haṃ pṛthivyāḥ." 63 mantras. Environmental conservation + nationalism.</td></tr>
+      <tr><td><strong>Gāyatrī Mantra</strong></td><td>ṚV 3.62.10</td><td>By Sage Viśvāmitra. 3rd Maṇḍala. Most sacred Vedic mantra.</td></tr>
+      <tr><td><strong>Rudradhyāya / Śatarudrīya</strong></td><td>YV (both)</td><td>Praise of Rudra — fierce and benevolent. Foundation of Śaiva tradition.</td></tr>
+      <tr><td><strong>Bhaijājya Sūktas (AV)</strong></td><td>Various AV Kāṇḍas</td><td>Mantras for fever, leprosy, TB using herbs + amulets. Source of Āyurveda.</td></tr>
+      <tr><td><strong>Āyuṣya & Pauṣṭika (AV)</strong></td><td>AV</td><td>Āyuṣya = prayers for long healthy life ("May we live 100 autumns"). Pauṣṭika = prosperity, agriculture, animal wealth.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Dialogue Hymns (Saṃvāda Sūktas)</div>
+  <table class="gt th-s">
+    <thead><tr><th>Dialogue</th><th>Maṇḍala.Sūkta</th><th>Theme</th></tr></thead>
+    <tbody>
+      <tr><td>Purūravā–Urvaśī</td><td>10.95</td><td>Love & separation; origin of Indian drama</td></tr>
+      <tr><td>Yama–Yamī</td><td>10.10</td><td>Ethics; incest taboo between brother-sister</td></tr>
+      <tr><td>Saramā–Paṇi</td><td>10.108</td><td>Indra's messenger recovering stolen cows</td></tr>
+      <tr><td>Viśvāmitra–Nadī</td><td>3.33</td><td>Rivers help Viśvāmitra cross; nature dialogue</td></tr>
+      <tr><td>Indra–Marut</td><td>1.165</td><td>Storm-gods dialogue</td></tr>
+      <tr><td>Agastya–Lopāmudrā</td><td>1.179</td><td>Husband-wife dialogue; worldly vs spiritual life</td></tr>
+      <tr><td>Vasiṣṭha–Sudāsa</td><td>7.83</td><td>Battle of Ten Kings (Daśarājña)</td></tr>
+      <tr><td>Indra–Indrāṇī–Vṛṣākapi</td><td>10.86</td><td>Domestic dialogue — social commentary</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Śukla vs Kṛṣṇa Yajurveda</div>
+  <div class="fc">
+    <div class="fc-title">Key Structural Difference</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div>
+        <div class="fc-parent" style="background:#888">शुक्ल Śukla (White/Pure)</div>
+        <div class="fc-children">
+          <div class="fc-child"><strong>Tradition</strong>Āditya (Sun God)</div>
+          <div class="fc-child"><strong>Content</strong>Only pure mantras (Saṃhitā)</div>
+          <div class="fc-child"><strong>Name</strong>Vājasaneyī Saṃhitā</div>
+          <div class="fc-child"><strong>Brāhmaṇa</strong>Śatapatha — kept separate</div>
+          <div class="fc-child"><strong>Śākhās</strong>Mādhyandina, Kāṇva</div>
+          <div class="fc-child"><strong>Upaniṣad</strong>Īśā (40th ch.), Bṛhadāraṇyaka</div>
+        </div>
+      </div>
+      <div>
+        <div class="fc-parent" style="background:var(--ink)">कृष्ण Kṛṣṇa (Dark/Mixed)</div>
+        <div class="fc-children">
+          <div class="fc-child"><strong>Tradition</strong>Brahma</div>
+          <div class="fc-child"><strong>Content</strong>Mantras + Brāhmaṇas intertwined</div>
+          <div class="fc-child"><strong>Name</strong>Taittirīya Saṃhitā</div>
+          <div class="fc-child"><strong>Brāhmaṇa</strong>Woven into text itself</div>
+          <div class="fc-child"><strong>Śākhās</strong>Taittirīya, Maitrāyaṇī, Kaṭhaka, Kapiṣṭhala</div>
+          <div class="fc-child"><strong>Upaniṣad</strong>Kaṭha, Taittirīya</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;margin-top:10px;color:var(--ink3)">▸ Key sacrifices described: Darśapūrṇamāsa · Rājasūya · Aśvamedha · Agnihotra · Soma yajña</p>
+  </div>
+
+  <div class="sec-div" style="background:var(--saffron-mid);color:#7A3400">Vedic Branch Distribution (Mahābhāṣya)</div>
+  <table class="gt th-s">
+    <thead><tr><th>Veda</th><th>Branches (total)</th><th>Available today</th><th>Key Brāhmaṇa</th></tr></thead>
+    <tbody>
+      <tr><td>Ṛgveda</td><td>21</td><td>Mainly Śākala</td><td>Aitareya · Kauṣītaki</td></tr>
+      <tr><td>Yajurveda</td><td>101</td><td>Several Śākhās</td><td>Śatapatha (largest) · Taittirīya</td></tr>
+      <tr><td>Sāmaveda</td><td>1,000</td><td>3 main Śākhās</td><td>Tāṇḍya Mahā Brāhmaṇa</td></tr>
+      <tr><td>Atharvaveda</td><td>9</td><td>Śaunaka main</td><td>Gopatha (only one)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hl saffron">
+    <div class="hl-label">8 Aṣṭa-Vikṛtis — Protection of Vedas</div>
+    <p>To prevent corruption, 8 recitation modifications (Aṣṭa-Vikṛtis) devised alongside basic Saṃhitā, Pada, Krama paths:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+      <span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Jaṭā</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Mālā</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Śikhā</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Rekhā</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Dhvaja</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Daṇḍa</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Ratha</span><span style="background:var(--saffron);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px">Ghana</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ UNIT 1B: UPAVEDAS ══════════════════ -->
+<div class="unit-section u1b" id="u1b">
+  <div class="unit-header">
+    <div class="unit-num">1B</div>
+    <div><h2>The Upavedas (उपवेदाः · Upavedāḥ)</h2>
+    <p>Four practical sciences subordinate to the four Vedas</p></div>
+  </div>
+
+  <div class="hl green">
+    <div class="hl-label">Definition</div>
+    <p><strong>Upaveda</strong> = practical worldly knowledge associated with the Veda (Vedopakārakāḥ vidyāḥ). Bridges transcendental Vedic knowledge with applied sciences.</p>
+    <div class="shloka">आयुर्वेदधनुर्वेदौ गान्धर्वश्चेति ते त्रयः। स्थापत्यवेदश्चतुर्थः उपवेदाः प्रकीर्तिताः॥
+<span class="iast">Āyurvedadhanurvēdau gāndharvāśceti te trayaḥ | Sthāpatyavedaścaturthaḥ upavedāḥ prakīrtitāḥ ||</span>
+<span class="ref">Caraṇavyūha</span></div>
+  </div>
+
+  <div class="fc">
+    <div class="fc-title">Four Upavedas — Mapped to Four Vedas</div>
+    <div class="fc-grid">
+      <div><div class="fc-parent" style="background:var(--saffron)">Ṛgveda (+ Atharva)</div><div class="fc-children"><div class="fc-child"><strong>Upaveda</strong>Āyurveda</div><div class="fc-child"><strong>Subject</strong>Medicine &amp; Health</div></div></div>
+      <div><div class="fc-parent" style="background:var(--blue)">Yajurveda</div><div class="fc-children"><div class="fc-child"><strong>Upaveda</strong>Dhanurveda</div><div class="fc-child"><strong>Subject</strong>Military Science</div></div></div>
+      <div><div class="fc-parent" style="background:var(--green)">Sāmaveda</div><div class="fc-children"><div class="fc-child"><strong>Upaveda</strong>Gāndharvaveda</div><div class="fc-child"><strong>Subject</strong>Music, Dance, Drama</div></div></div>
+      <div><div class="fc-parent" style="background:var(--maroon)">Atharvaveda</div><div class="fc-children"><div class="fc-child"><strong>Upaveda</strong>Sthāpatyaveda</div><div class="fc-child"><strong>Subject</strong>Architecture / Vāstu</div></div></div>
+    </div>
+  </div>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Āyurveda — Aṣṭāṅga (8 Branches)</div>
+  <div class="hl green">
+    <div class="hl-label">Purpose + Core Texts</div>
+    <p><strong>Purpose:</strong> Protect health of the healthy + cure disease of the sick.</p>
+    <div class="shloka">प्रयोजनं चास्य स्वस्थस्य स्वास्थ्यरक्षणमातुरस्य विकारप्रशमनं च॥
+<span class="iast">Prayojanaṃ cāsya svasthasya svāsthyarakṣaṇam āthurasya vikārapraśamanaṃ ca ||</span>
+<span class="ref">Carakasaṃhitā Sūtrasthāna 30.26</span></div>
+    <p style="margin-top:8px"><strong>Bṛhat Trayī:</strong> Carakasaṃhitā · Suśrutasaṃhitā · Aṣṭāṅgahṛdayam (Vāgbhaṭa)</p>
+    <p style="margin-top:6px"><strong>Tridoṣas:</strong> Vāta (Space+Air) · Pitta (Fire) · Kapha (Water+Earth) — Health = their balance (sāmya). Disease = imbalance (vikṛti).</p>
+    <div class="shloka" style="margin-top:6px">वायुः पित्तं कफश्चेति त्रयो दोषाः समासतः।
+<span class="ref">Aṣṭāṅgahṛdayam Sūtrasthāna 1.6</span></div>
+  </div>
+  <table class="gt th-g">
+    <thead><tr><th>#</th><th>Branch (IAST)</th><th>Subject</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Kāyacikitsā</td><td>General internal medicine (cure via herbs)</td></tr>
+      <tr><td>2</td><td>Bālaroga / Kaumārabhṛtya</td><td>Pediatrics</td></tr>
+      <tr><td>3</td><td>Graharoga / Bhūtavidyā</td><td>Psychiatry / Spirit/mental disorders</td></tr>
+      <tr><td>4</td><td>Ūrdhvāṅga / Śālākya Tantra</td><td>ENT, Eye (Ophthalmology)</td></tr>
+      <tr><td>5</td><td>Śalya Tantra</td><td>Surgery — Suśruta: 125 instruments, rhinoplasty</td></tr>
+      <tr><td>6</td><td>Daṃṣṭrā / Agada Tantra</td><td>Toxicology (venom, poisons)</td></tr>
+      <tr><td>7</td><td>Jarā / Rasāyana Tantra</td><td>Geriatrics &amp; Rejuvenation</td></tr>
+      <tr><td>8</td><td>Vṛṣaṇa / Vājīkaraṇa</td><td>Reproductive medicine / Aphrodisiacs</td></tr>
+    </tbody>
+  </table>
+  <ul class="blist">
+    <li><strong>Dinacarya</strong> (daily routine: wake at Brāhmamuhūrta, oral hygiene, exercise) + <strong>Ṛtucarya</strong> (seasonal diet &amp; lifestyle) keep Tridoṣas balanced — Preventive Medicine.</li>
+    <li><strong>Carakasaṃhitā</strong> = premier text for Kāyacikitsā. <strong>Suśrutasaṃhitā</strong> = oldest surgery text (8 types of procedures: excision, incision, scraping, puncturing etc.). <strong>Aṣṭāṅgahṛdayam</strong> = concise synthesis by Vāgbhaṭa.</li>
+    <li><strong>Pañcamahābhūtas → Tridoṣas:</strong> Ākāśa+Vāyu = Vāta · Agni = Pitta · Jala+Pṛthvī = Kapha</li>
+  </ul>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Dhanurveda — Military Science</div>
+  <table class="gt th-g">
+    <thead><tr><th>Concept</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td><strong>4 Types of Weapons</strong></td><td>Mukta (thrown — arrow, cakra) · Amukta (hand — sword, mace) · Muktāmukta (both — spear, javelin) · Yantramukta (machine-launched)</td></tr>
+      <tr><td><strong>Astra vs Śastra</strong></td><td>Astra = thrown with mantra/force (Mantreṇa kṣipyate) · Śastra = held in hand (Pāṇau dhṛtvā prahanyate)</td></tr>
+      <tr><td><strong>Four-fold Army (Caturāṅginī Senā)</strong></td><td>Patti (infantry) · Aśvārohin (cavalry) · Gajārohin (elephants) · Rathin (chariots)</td></tr>
+      <tr><td><strong>Tactical Formations (Vyūha)</strong></td><td>Cakra Vyūha · Garuḍa Vyūha · Makara Vyūha · Daṇḍa Vyūha</td></tr>
+      <tr><td><strong>Dharma Yuddha Rules</strong></td><td>Never strike: sleeping, unarmed, fleeing, naked, woman, child. Ceasefires after sunset. (Manusmṛti 7.92)</td></tr>
+      <tr><td><strong>Key Texts</strong></td><td>Śiva Dhanurveda · Vasiṣṭha Dhanurveda · Nīti Prakāśikā · Śukranīti</td></tr>
+      <tr><td><strong>Great Teachers</strong></td><td>Viśvāmitra · Vasiṣṭha · Paraśurāma · Droṇācārya</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Gāndharvaveda — Music, Dance &amp; Drama</div>
+  <table class="gt th-g">
+    <thead><tr><th>Topic</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Three Arts (Saṃgīta)</strong></td><td>Gīta (vocal) + Vādya (instrumental) + Nṛtya (dance) = Saṃgīta</td></tr>
+      <tr><td><strong>Seven Notes (Saptasvarāḥ)</strong></td><td>Ṣaḍja · Ṛṣabha · Gāndhāra · Madhyama · Pañcama · Dhaivata · Niṣāda → Sa Re Ga Ma Pa Dha Ni</td></tr>
+      <tr><td><strong>22 Śrutis (microtones)</strong></td><td>Subtle audible pitches; give rise to 7 primary Svaras; → Grāma → Mūrchanā (ascending/descending scale)</td></tr>
+      <tr><td><strong>4 Instrument Types</strong></td><td>Tata (string: Vīṇā, Sitar) · Suṣira (wind: Flute, Śaṅkha) · Avannaddha (drum: Mṛdaṅga, Dholak) · Ghana (metal: Cymbals)</td></tr>
+      <tr><td><strong>Navarasas</strong></td><td>Śṛṅgāra · Hāsya · Karuṇa · Raudra · Vīra · Bhayānaka · Bībhatsa · Adbhuta · Śānta</td></tr>
+      <tr><td><strong>Mārgi vs Deśī</strong></td><td>Mārgi = divine/strict classical (path to liberation) · Deśī = folk/regional (for entertainment)</td></tr>
+      <tr><td><strong>Bharata's Nāṭyaśāstra</strong></td><td>5th Veda. Extracts: Pāṭhya (text) from Ṛgveda · Gīta from Sāmaveda · Abhinaya from Yajurveda · Rasas from Atharvaveda</td></tr>
+      <tr><td><strong>Nāda Brahma</strong></td><td>Music = not entertainment but Yoga. "Sound is the cosmos." Unstruck (Anāhata) + Struck (Āhata) sound. Path to liberation through Nādopāsanā.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Sthāpatyaveda — Architecture (Vāstuśāstra)</div>
+  <ul class="blist">
+    <li><strong>Three Temple Styles:</strong> Nāgara (North India — curvilinear Śikhara) · Drāviḍa (South — pyramid Vimāna + Gopuram) · Vesara (Central — hybrid of both)</li>
+    <li><strong>Key Texts:</strong> Mānasāra · Samārāṅgaṇasūtradhāra · Māyamataṃ · Aparājitapṛcchā</li>
+    <li><strong>18 Preceptors:</strong> Bhṛgu, Atri, Vasiṣṭha, Viśvakarmā, Maya Dānava etc.</li>
+    <li><strong>Vāstu Puruṣa Maṇḍala:</strong> 81-square (9×9) or 64-square (8×8) grid with Brahmā at center. Guides building alignment, energy, ventilation, natural light.</li>
+    <li><strong>Soil Testing:</strong> Examine color (white, red, yellow, black), smell, taste, water absorption speed before construction.</li>
+    <li><strong>5 Fort Types (Durgam):</strong> Jala (water) · Vana (forest) · Giri (mountain) · Dhanva (desert) · Mahī (plains)</li>
+    <li><strong>Also called Arthaveda:</strong> Town planning, agriculture, machines, metallurgy = all about Artha (wealth) of kingdom.</li>
+    <li><strong>Preceptors:</strong> Viśvakarmā (divine architect) · Maya Dānava (demon architect)</li>
+  </ul>
+</div>
+
+<!-- ══════════════════ UNIT 2: VEDĀṄGAS ══════════════════ -->
+<div class="unit-section u2" id="u2">
+  <div class="unit-header">
+    <div class="unit-num">2</div>
+    <div><h2>The Vedāṅgas (वेदाङ्गाः · Vedāṅgāḥ)</h2>
+    <p>Six auxiliary sciences — Limbs of the Veda · Without these, Vedic study is impossible</p></div>
+  </div>
+
+  <div class="hl blue">
+    <div class="hl-label">Why Needed?</div>
+    <p>Vedic mantras are highly ancient. Without Vedāṅgas, correct pronunciation (Śikṣā), grammatical form (Vyākaraṇa), meaning (Nirukta), meter (Chanda), ritual procedure (Kalpa), and cosmic timing (Jyotiṣa) are impossible.</p>
+    <div class="shloka">षडङ्गाणि वेदस्य। ब्राह्मणो निष्कारणो धर्मः षडङ्गो वेदोऽध्येयो ज्ञेयश्च।
+<span class="ref">Mahābhāṣya (Patañjali)</span></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Veda Puruṣa Body Analogy</div>
+  <div class="bdiag">
+    <div class="bdiag-inner">
+      <div class="bd-part" style="background:var(--blue-light);border-color:var(--blue)"><div class="bd-icon">👁️</div><strong>EYES (चक्षुः · Cakṣuḥ)</strong>Jyotiṣa — Astronomy (sees auspicious time for rituals)</div>
+      <div class="bd-part" style="background:#fff;border-color:var(--border)"><div class="bd-icon">👃</div><strong>NOSE (घ्राणम् · Ghrāṇam)</strong>Śikṣā — Phonetics (correct pronunciation, accents)</div>
+      <div class="bd-part" style="background:var(--blue-light);border-color:var(--blue)"><div class="bd-icon">👂</div><strong>EARS (श्रोत्रम् · Śrotram)</strong>Nirukta — Etymology (understands Vedic word meanings)</div>
+      <div class="bd-part" style="background:#fff;border-color:var(--border)"><div class="bd-icon">👄</div><strong>MOUTH (मुखम् · Mukham)</strong>Vyākaraṇa — Grammar (expresses and articulates the Veda)</div>
+      <div class="bd-part" style="background:var(--blue-light);border-color:var(--blue)"><div class="bd-icon">🤲</div><strong>HANDS (हस्तौ · Hastau)</strong>Kalpa — Ritual procedures (performs the actual rituals)</div>
+      <div class="bd-part" style="background:#fff;border-color:var(--border)"><div class="bd-icon">🦶</div><strong>FEET (पादौ · Pādau)</strong>Chanda — Meter (rhythm/movement of Vedic recitation)</div>
+    </div>
+    <div class="shloka" style="margin-top:10px;max-width:600px;text-align:left">शिक्षा कल्पो व्याकरणं निरुक्तं छन्दसां चयः। ज्योतिषामयनं चैव षडङ्गो वेद उच्यते॥
+<span class="iast">Śikṣā kalpo vyākaraṇaṃ niruktaṃ chandasāṃ cayaḥ | Jyotiṣāmayanaṃ caiva ṣaḍaṅgo veda ucyate ||</span>
+<span class="ref">Pāṇinīyaśikṣā</span></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">All Six Vedāṅgas — Complete Details</div>
+  <table class="gt th-b">
+    <thead><tr><th>Vedāṅga</th><th>Subject</th><th>Key Text / Ṛṣi</th><th>Key Facts</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Śikṣā</strong><br><em style="font-size:11px">Phonetics</em></td>
+        <td>Correct pronunciation of letters, accents (Udātta, Anudātta, Svarita), duration</td>
+        <td>Pāṇinīyaśikṣā · Yājñavalkyaśikṣā</td>
+        <td>8 places of articulation: chest, throat, head, tongue-root, teeth, nose, lips, palate. 6 merits of reciter: sweetness, clarity, word-separation, good pitch, steadiness, rhythm. 6 faults: singing, rushing, head-shaking, blind reading, ignorance, weak voice.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Kalpa</strong><br><em style="font-size:11px">Rituals</em></td>
+        <td>Rules &amp; procedures for Vedic rituals (Yajñas)</td>
+        <td>4 types of Kalpa Sūtras</td>
+        <td><strong>Śrauta Sūtras</strong> (large public yajñas: Aśvamedha, Rājasūya) · <strong>Gṛhya Sūtras</strong> (domestic: 16 Saṃskāras, 5 daily sacrifices) · <strong>Dharma Sūtras</strong> (social law: Varṇāśrama, king's duties) · <strong>Śulba Sūtras</strong> (altar geometry — contains Pythagorean theorem! Baudhayana 1.48)</td>
+      </tr>
+      <tr>
+        <td><strong>3. Vyākaraṇa</strong><br><em style="font-size:11px">Grammar</em></td>
+        <td>Word analysis, grammatical correctness, root+suffix derivation</td>
+        <td>Pāṇini's Aṣṭādhyāyī (3,995 sūtras, 8 chapters) · Patañjali's Mahābhāṣya</td>
+        <td><strong>Munitraya:</strong> Pāṇini (core rules) → Kātyāyana (Vārtikas — amendments) → Patañjali (Mahābhāṣya — commentary). <strong>5 Purposes:</strong> Rakṣā (protect Veda) · Ūha (ritual modification) · Āgama (scriptural duty) · Laghu (easy learning) · Asaṃdeha (remove doubt). 14 Śiva Sūtras → 42 Pratyāhāras.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Nirukta</strong><br><em style="font-size:11px">Etymology</em></td>
+        <td>Meanings of difficult Vedic words; etymology (Nirvacana)</td>
+        <td>Nirukta by Sage Yāska; based on Nighaṇṭu dictionary</td>
+        <td><strong>4 Parts of Speech:</strong> Nāma (noun/substance-primary) · Ākhyāta (verb/action-primary) · Upasarga (prefix — illuminates meaning) · Nipāta (particle — comparative, conjunctive, expletive). <strong>3 Deity Realms:</strong> Terrestrial (Agni) · Atmospheric (Vāyu/Indra) · Celestial (Sūrya). Famous: "One who reads without understanding is a burden-carrier (Sthāṇurayaṃ bhārahāraḥ…)"</td>
+      </tr>
+      <tr>
+        <td><strong>5. Chanda</strong><br><em style="font-size:11px">Meter</em></td>
+        <td>Counting syllables and beats (Mātrā) in Vedic mantras</td>
+        <td>Chandaḥsūtram by Sage Piṅgala (Piṅgalanāga)</td>
+        <td>7 Vedic meters (each +4 syllables): Gāyatrī(24) · Uṣṇik(28) · Anuṣṭubh(32) · Bṛhatī(36) · Paṅkti(40) · Triṣṭubh(44) · Jagatī(48). Piṅgala's 8-group formula: <em>Ya-ma-ta-rā-ja-bhā-na-sa-la-gā</em>. Akṣara-vṛtta (syllable count) vs Mātrā-vṛtta (duration count).</td>
+      </tr>
+      <tr>
+        <td><strong>6. Jyotiṣa</strong><br><em style="font-size:11px">Astronomy</em></td>
+        <td>Timing of Vedic rituals; astronomical calculations for rituals</td>
+        <td>Vedāṅga Jyotiṣa by Sage Lagadha (oldest text)</td>
+        <td>Calculates: Solstices, seasons, months, Tithi (lunar days), Nakṣatras (constellations). Ahargaṇa = total elapsed days from cosmic epoch (Kalpa). Foundation of Indian astronomy. "Jyotiṣa is the eyes of the Veda."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl blue">
+    <div class="hl-label">Śulba Sūtra — Geometry &amp; Mathematics</div>
+    <p><strong>'Śulba'</strong> = measuring cord/rope. Used to build geometrically precise fire-altars (Vedis) in shapes like falcon, circle, square. Contains <strong>Baudhayana's Theorem</strong> — antecedent of the Pythagorean theorem:</p>
+    <div class="shloka">दीर्घचतुरस्रस्याक्ष्णया रज्जुः पार्श्वमानी तिर्यङ्मानी च यत् पृथग्भूते कुरुतस्तदुभयं करोति।
+<span class="iast">Dīrghacaturasrasyākṣṇayā rajjuḥ pārśvamānī tiryaṅmānī ca yat pṛthagbhūte kurutastadubhayaṃ karoti |</span>
+<span class="ref">Baudhāyana Śulbasūtra 1.48</span></div>
+    <p style="margin-top:6px;font-size:13px">Modern equivalent: "The diagonal of a rectangle produces both areas that its length and breadth produce separately." = a² + b² = c²</p>
+  </div>
+
+  <div class="hl blue">
+    <div class="hl-label">Yāska's Famous Dictum (Nirukta)</div>
+    <div class="shloka">स्थाणुरयं भारहारः किलाभूदधीत्य वेदं न विजानाति योऽर्थम्।
+<span class="iast">Sthāṇurayaṃ bhārahāraḥ kilābhūd adhītya vedaṃ na vijānāti yo'rtham |</span>
+<span class="ref">Nirukta 1.18</span></div>
+    <p style="margin-top:6px;font-size:13px">"He who has studied the Veda but does not know its meaning is like a post carrying a heavy burden." — Underscores the absolute necessity of Nirukta.</p>
+  </div>
+</div>
+
+<!-- ══════════════════ UNIT 3: DAŚOPANIṢADS ══════════════════ -->
+<div class="unit-section u3" id="u3">
+  <div class="unit-header">
+    <div class="unit-num">3</div>
+    <div><h2>Daśopaniṣads (दशोपनिषद् · Daśopaniṣad)</h2>
+    <p>Principal Ten Upaniṣads — Vedānta philosophy — Brahmavidyā</p></div>
+  </div>
+
+  <div class="hl maroon">
+    <div class="hl-label">Definition + Subject</div>
+    <p><strong>Upaniṣad</strong> = Upa (near) + ni (down) + ṣad (sit) = Knowledge received sitting near the Guru that destroys ignorance (Avidyānāśakam) and leads to Brahman (Brahmagamakam).</p>
+    <p style="margin-top:6px"><strong>Subject:</strong> Unity of Jīva (individual soul) + Brahman (Universal Soul) + Jagat (Universe). Attainment of Mokṣa. This is the philosophy of <strong>Vedānta</strong> — the culmination of the Vedas.</p>
+    <p style="margin-top:6px"><strong>108</strong> total Upaniṣads. <strong>10</strong> principal = Daśopaniṣads (commented by Ādi Śaṅkarācārya). Vedas: Mantra + Brāhmaṇa + Āraṇyaka + <strong>Upaniṣad</strong>.</p>
+    <div class="shloka">उप + नि + सद् — अविद्यानाशकम् ब्रह्मगमकं ज्ञानम्।
+वेदान्तो नाम उपनिषत्प्रमाणम्।<span class="ref">Vedāntasāra</span></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--maroon-mid);color:#4A0012">Four Mahāvākyas (Great Sayings)</div>
+  <div class="mv-grid">
+    <div class="mv-card" style="background:var(--saffron-light);border-color:var(--saffron)">
+      <div class="mv-devanagari">प्रज्ञानं ब्रह्म</div>
+      <div class="mv-text">"Prajñānaṃ Brahma"</div>
+      <div class="mv-meaning">Consciousness is Brahman</div>
+      <div class="mv-source">Aitareya Up. 3.1.3 · Ṛgveda</div>
+    </div>
+    <div class="mv-card" style="background:var(--blue-light);border-color:var(--blue)">
+      <div class="mv-devanagari">अहं ब्रह्मास्मि</div>
+      <div class="mv-text">"Ahaṃ Brahmāsmi"</div>
+      <div class="mv-meaning">I am Brahman</div>
+      <div class="mv-source">Bṛhadāraṇyaka Up. 1.4.10 · Yajurveda</div>
+    </div>
+    <div class="mv-card" style="background:var(--green-light);border-color:var(--green)">
+      <div class="mv-devanagari">तत् त्वम् असि</div>
+      <div class="mv-text">"Tat Tvam Asi"</div>
+      <div class="mv-meaning">That Thou Art</div>
+      <div class="mv-source">Chāndogya Up. 6.8.7 · Sāmaveda</div>
+    </div>
+    <div class="mv-card" style="background:var(--maroon-light);border-color:var(--maroon)">
+      <div class="mv-devanagari">अयम् आत्मा ब्रह्म</div>
+      <div class="mv-text">"Ayam Ātmā Brahma"</div>
+      <div class="mv-meaning">This Self is Brahman</div>
+      <div class="mv-source">Māṇḍūkya Up. 2 · Atharvaveda</div>
+    </div>
+  </div>
+
+  <div class="sec-div" style="background:var(--maroon-mid);color:#4A0012">All Ten Daśopaniṣads — Full Details with Ślokas</div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">1. Īśā Upaniṣad (ईशावास्योपनिषद्)</div><div class="upd-veda">Śukla Yajurveda · 40th ch.</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Mantras</strong>18</div>
+      <div class="upd-fact"><strong>Branch</strong>Mādhyandina Śākhā</div>
+      <div class="upd-fact"><strong>Key theme</strong>Nishkāma Karma + Vidyā-Avidyā synthesis</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Core teaching:</strong> "Everything is pervaded by the Lord (Īśa). Enjoy by renouncing attachment (Tena tyaktena bhuñjīthāḥ)." Live 100 years performing duties without desire (Nishkāma Karma Yoga).</li>
+      <li><strong>Vidyā-Avidyā synthesis:</strong> Avidyā (prescribed karma/action) alone → darkness. Vidyā (knowledge) alone → greater darkness. Use both: Avidyā to cross death, Vidyā to attain immortality.</li>
+      <li><strong>Nature of Ātman:</strong> One, motionless, faster than mind, far yet near, bodiless, pure, untouched by sin.</li>
+    </ul>
+    <div class="shloka">ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्। तेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम्॥
+<span class="iast">Īśāvāsyamidaṃ sarvaṃ yatkiñca jagatyāṃ jagat | Tena tyaktena bhuñjīthā mā gṛdhaḥ kasyasvid dhanam ||</span>
+<span class="ref">Īśopaniṣad 1</span></div>
+    <div class="shloka" style="margin-top:6px">अविद्यया मृत्युं तीर्त्वा विद्ययामृतमश्नुते।
+<span class="iast">Avidyayā mṛtyuṃ tīrtvā vidyayāmṛtam aśnute |</span><span class="ref">Īśopaniṣad 11</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">2. Kena Upaniṣad (केनोपनिषद्)</div><div class="upd-veda">Sāmaveda · Talavakāra Brāhmaṇa (Jaiminīya)</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Sections</strong>4 Khaṇḍas</div>
+      <div class="upd-fact"><strong>Key theme</strong>Who is the real knower? Yakṣa story</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Opening question:</strong> "By whose will does the mind function? Who drives Prāṇa? Who causes speech? Who directs eyes and ears?" — the conscious Brahman behind all faculties.</li>
+      <li><strong>Yakṣa story:</strong> After victory over demons, gods became proud. Brahman appeared as a Yakṣa. Agni and Vāyu could not burn or blow a single blade of grass — all divine power belongs to God alone.</li>
+      <li><strong>Paradox of knowledge:</strong> "He who thinks he knows Brahman does not truly know it; he who knows it is unknowable, truly knows." (Yasyāmataṃ tasya mataṃ...)</li>
+      <li><strong>Uma Haimavati</strong> appears in the sky and reveals Brahman's identity to Indra.</li>
+    </ul>
+    <div class="shloka">केनेषितं पतति प्रेषितं मनः। केन प्राणः प्रथमः प्रैति युक्तः॥
+<span class="iast">Kenēṣitaṃ patati preṣitaṃ manaḥ | Kena prāṇaḥ prathamaḥ praiti yuktaḥ ||</span><span class="ref">Kenopaniṣad 1.1</span></div>
+    <div class="shloka" style="margin-top:6px">यस्यामतं तस्य मतं मतं यस्य न वेद सः। अविज्ञातं विजानतां विज्ञातमविजानताम्॥
+<span class="ref">Kenopaniṣad 2.3</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">3. Kaṭha Upaniṣad (कठोपनिषद्)</div><div class="upd-veda">Kṛṣṇa Yajurveda · Kaṭha Śākhā</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Father</strong>Vajāśravas (Naciketa's father)</div>
+      <div class="upd-fact"><strong>3 Boons</strong>from Yama</div>
+      <div class="upd-fact"><strong>Key theme</strong>Eternal Ātman · Chariot metaphor · Śreya vs Preya</div>
+    </div>
+    <ul class="blist">
+      <li><strong>3rd Boon:</strong> "Tell me the secret of death." Yama offers wealth, kingdoms, women — Naciketa refuses all. Truly dispassionate (Vairāgya).</li>
+      <li><strong>Śreya vs Preya:</strong> Śreya = path of ultimate welfare/liberation. Preya = path of worldly pleasure. "A wise person chooses Śreya though it is difficult."</li>
+      <li><strong>Nature of Ātman:</strong> "Aṇor aṇīyān mahato mahīyān" — subtler than the subtlest, greater than the greatest. Eternal — never born, never dies.</li>
+      <li><strong>Chariot Metaphor (Ratha-rūpaka):</strong> Body = chariot. Soul = Rathī (owner). Intellect (Buddhi) = charioteer. Mind = reins. Senses = horses. Sense-objects = roads. Control senses → liberation.</li>
+    </ul>
+    <div class="shloka">आत्मानं रथिनं विद्धि शरीरं रथमेव तु। बुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च॥
+<span class="iast">Ātmānaṃ rathinaṃ viddhi śarīraṃ rathameva tu | Buddhiṃ tu sārathiṃ viddhi manaḥ pragrahameva ca ||</span><span class="ref">Kaṭhopaniṣad 1.3.3</span></div>
+    <div class="shloka" style="margin-top:6px">अणोरणीयान् महतो महीयानात्माऽस्य जन्तोर्निहितो गुहायाम्।
+<span class="ref">Kaṭhopaniṣad 1.2.20</span></div>
+    <div class="shloka" style="margin-top:6px">श्रेयश्च प्रेयश्च मनुष्यमेतस्तौ सम्परीत्य विविनक्ति धीरः। श्रेयो हि धीरोऽभि प्रेयसो वृणीते...
+<span class="ref">Kaṭhopaniṣad 1.2.2</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">4. Praśna Upaniṣad (प्रश्नोपनिषद्)</div><div class="upd-veda">Atharvaveda · Pippalāda Śākhā</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>6 Sages</strong>ask 6 questions to Pippalāda</div>
+      <div class="upd-fact"><strong>Key themes</strong>Prāṇa · Rāyi · Ṣoḍaśakāla Puruṣa</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Q1 — Creation:</strong> Prajāpati created Rāyi (matter/moon/food) and Prāṇa (energy/sun/consciousness). All life born from their union.</li>
+      <li><strong>Q2 — Supremacy of Prāṇa:</strong> Prāṇa is greatest of all — sustains life, gods, senses. "Like bees leaving when the queen leaves, all senses depart when Prāṇa goes."</li>
+      <li><strong>Q3 — Five Prāṇas:</strong> Apāna (lower organs), Prāṇa (eyes/nose/mouth), Samāna (navel), Vyāna (all 72,000 nāḍīs), Udāna (Suṣumnā — upward at death).</li>
+      <li><strong>Q4 — States of consciousness:</strong> In waking and dreaming, Prāṇa is active. In deep sleep, everything merges into Prāṇa.</li>
+      <li><strong>Q5 — OM meditation:</strong> A = human world · U = lunar world · A+U+M = Solar world (Brahma Loka).</li>
+      <li><strong>Q6 — 16-part Puruṣa (Ṣoḍaśakāla):</strong> Resides within this very body.</li>
+    </ul>
+    <div class="shloka">स मिथुनमुत्पादयते। रयिं च प्राणं चेत्येतौ मे बहुधा प्रजाः करिष्यत इति॥
+<span class="ref">Praśnopaniṣad 1.4</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">5. Muṇḍaka Upaniṣad (मुण्डकोपनिषद्)</div><div class="upd-veda">Atharvaveda · Śaunaka Śākhā</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Source of</strong>India's national motto</div>
+      <div class="upd-fact"><strong>Key themes</strong>Parā/Aparā Vidyā · Two Birds · Fragile boats</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Two Vidyās:</strong> Aparā Vidyā = Vedas + Vedāṅgas (worldly, lower knowledge). Parā Vidyā = knowledge of imperishable Supreme Brahman (higher, liberating knowledge).</li>
+      <li><strong>Fragile boats:</strong> Desire-driven rituals = "Adriḍhāḥ Plavāḥ" — fragile, leaky boats that cannot carry one across the ocean of saṃsāra.</li>
+      <li><strong>Spider metaphor:</strong> As a spider spins and withdraws its web; as herbs grow on earth — so the universe originates from Brahman.</li>
+      <li><strong>Two Birds metaphor:</strong> Jīvātman (individual soul) eats fruits of karma and grieves. Paramātman simply watches as a witness. Realizing Paramātman → liberation.</li>
+      <li><strong>Jīvanmukti:</strong> "Bhidyate hṛdayagranthiḥ…" — Knot of heart-ignorance breaks, all doubts severed, past karmas exhausted → liberation like rivers merging into ocean.</li>
+    </ul>
+    <div class="shloka">सत्यमेव जयते नानृतं सत्येन पन्था विततो देवयानः।
+<span class="iast">Satyameva jayate nānṛtaṃ satyena panthā vitato devayānaḥ |</span><span class="ref">Muṇḍakopaniṣad 3.1.6</span></div>
+    <div class="shloka" style="margin-top:6px">द्वा सुपर्णा सयुजा सखाया समानं वृक्षं परिषस्वजाते। तयोरन्यः पिप्पलं स्वाद्वत्त्यनश्नन्नन्यो अभिचाकशीति॥
+<span class="ref">Muṇḍakopaniṣad 3.1.1</span></div>
+    <div class="shloka" style="margin-top:6px">भिद्यते हृदयग्रन्थिश्छिद्यन्ते सर्वसंशयाः। क्षीयन्ते चास्य कर्माणि तस्मिन् दृष्टे परावरे॥
+<span class="ref">Muṇḍakopaniṣad 2.2.8</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">6. Māṇḍūkya Upaniṣad (माण्डूक्योपनिषद्)</div><div class="upd-veda">Atharvaveda</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Mantras</strong>12 only (shortest)</div>
+      <div class="upd-fact"><strong>Mahāvākya</strong>Ayam Ātmā Brahma</div>
+      <div class="upd-fact"><strong>Key theme</strong>4 states of Ātman · OM = A+U+M</div>
+    </div>
+    <ul class="blist">
+      <li><strong>4 States (Catuṣpāt):</strong> Jāgrat (waking — Vaiśvānara · A) → Svapna (dreaming — Taijasa · U) → Suṣupti (deep sleep — Prājña · M) → Turīya (pure consciousness = Brahman · Amātra/silence).</li>
+      <li><strong>Turīya:</strong> "Neither inwardly cognitive nor outwardly cognitive. Peaceful, auspicious, non-dual. This alone is the Ātman." — Crown of Advaita.</li>
+      <li><strong>OM = A+U+M:</strong> A = Vaiśvānara (waking). U = Taijasa (dream). M = Prājña (deep sleep). Silence (Amātra) = Turīya.</li>
+    </ul>
+    <div class="shloka">सोऽयमात्मा चतुष्पात्।<span class="ref">Māṇḍūkyopaniṣad 2</span></div>
+    <div class="shloka" style="margin-top:6px">नान्तःप्रज्ञं न बहिष्प्रज्ञं नोभयतःप्रज्ञं... शान्तं शिवमद्वैतं चतुर्थं मन्यन्ते स आत्मा स विज्ञेयः॥
+<span class="ref">Māṇḍūkyopaniṣad 7</span></div>
+    <div class="shloka" style="margin-top:6px">जागरितस्थानो वैश्वानरः अकारः प्रथमा मात्रा... स्वप्नस्थानस्तैजस उकारो द्वितीया मात्रा... सुषुप्तस्थानः प्राज्ञो मकारस्तृतीया मात्रा... अमात्रश्चतुर्थोऽव्यवहार्यः... ओङ्कार आत्मैव।
+<span class="ref">Māṇḍūkyopaniṣad 9–12</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">7. Taittirīya Upaniṣad (तैत्तिरीयोपनिषद्)</div><div class="upd-veda">Kṛṣṇa Yajurveda · Taittirīya Āraṇyaka</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>3 Vallis</strong>Śikṣā · Brahmānanda · Bhṛgu</div>
+      <div class="upd-fact"><strong>Key theme</strong>Pañcakoṣa · Ānaṃda-mīmāṃsā · Bhṛgu-Varuṇa</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Convocation address (Śikṣā Vallī):</strong> "Satyaṃ vada. Dharmaṃ cara. Svādhyāyān mā pramadaḥ." Revere mother, father, teacher, guest as God.</li>
+      <li><strong>Pañcakoṣas (5 Sheaths):</strong> Annamaya → Prāṇamaya → Manomaya → Vijñānamaya → Ānandamaya (outermost to innermost). True Ātman lies beyond all five.</li>
+      <li><strong>Definition of Brahman (Bhṛgu Vallī):</strong> "That from which all beings are born, by which they are sustained, into which they merge = Brahman."</li>
+      <li><strong>Ānanda-mīmāṃsā:</strong> Scale of bliss from human joy to Prajāpati's joy — but ultimate bliss = Brahmānanda (infinite bliss), naturally experienced by the desireless knower of Brahman.</li>
+    </ul>
+    <div class="shloka">सत्यं वद। धर्मं चर। स्वाध्यायान्मा प्रमदः। मातृदेवो भव। पितृदेवो भव। आचार्यदेवो भव। अतिथिदेवो भव।
+<span class="ref">Taittirīyopaniṣad Śikṣāvallī 11.1</span></div>
+    <div class="shloka" style="margin-top:6px">यतो वा इमानि भूतानि जायन्ते। येन जातानि जीवन्ति। यत्प्रयन्त्यभिसंविशन्ति। तद् विजिज्ञासस्व। तद् ब्रह्मेति।
+<span class="ref">Taittirīyopaniṣad Bhṛguvallī 1</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">8. Aitareya Upaniṣad (ऐतरेयोपनिषद्)</div><div class="upd-veda">Ṛgveda · Aitareya Āraṇyaka</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Mahāvākya</strong>Prajñānaṃ Brahma</div>
+      <div class="upd-fact"><strong>3 Births</strong>of the soul</div>
+      <div class="upd-fact"><strong>Key theme</strong>Creation sequence · Brahman's entry via Vidyṛti path</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Creation sequence:</strong> Brahman created realms (Ambhas, Marīci, Mara, Āpa). Then cosmic Puruṣa; from His mouth = Vāk/Agni; ears = Diśas; eyes = Sūrya; nāvel = Vāyu etc.</li>
+      <li><strong>Brahman's entry:</strong> Having created the body, Brahman asked "How shall I enter?" → parted the crown (Brahmarandhra) and entered via Vidyṛti path. Three births of soul.</li>
+      <li><strong>Vāmadeva story:</strong> Sage Vāmadeva attained Brahma-jñāna while still in the womb.</li>
+    </ul>
+    <div class="shloka">प्रज्ञानं ब्रह्म।<span class="iast">Prajñānaṃ Brahma |</span><span class="ref">Aitareyopaniṣad 3.1.3</span></div>
+    <div class="shloka" style="margin-top:6px">सर्वं तत् प्रज्ञानेत्रं प्रज्ञाने प्रतिष्ठितं प्रज्ञानेत्रो लोकः प्रज्ञा प्रतिष्ठा प्रज्ञानं ब्रह्म।
+<span class="ref">Aitareyopaniṣad 3.1.3</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">9. Chāndogya Upaniṣad (छान्दोग्योपनिषद्)</div><div class="upd-veda">Sāmaveda · Chāndogya Brāhmaṇa</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Mahāvākya</strong>Tat Tvam Asi</div>
+      <div class="upd-fact"><strong>Key dialogues</strong>Uddalaka–Śvetaketu · Satyakāma Jābāla · Sanatkumāra–Nārada</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Tat Tvam Asi (6th Prapāṭhaka):</strong> Uddalaka teaches Śvetaketu. Trivṛtkaraṇa: From one Sat → Fire, Water, Earth (each contains all three). "Salt in water" metaphor — Brahman pervades all but unseen. Tat = Brahman · Tvam = Jīva · Asi = "You are" → non-duality.</li>
+      <li><strong>Satyakāma Jābāla:</strong> Honestly revealed unknown lineage. Sage Gautama: "Only a true Brahmin would speak such truth." → Truth is highest virtue.</li>
+      <li><strong>Sarvam khalvidam Brahma (Śāṇḍilya Vidyā):</strong> "This entire universe is Brahman — Tajjalān (born from, merges into, breathes in Brahman)."</li>
+      <li><strong>Bhūma Vidyā:</strong> "Where one sees nothing else, hears nothing else = Bhūma (the Infinite)." True happiness only in the Infinite, not in the finite.</li>
+      <li><strong>Dahara Vidyā:</strong> Brahman resides in the subtle space (Dahara Ākāśa) within the lotus of the heart in the "city of Brahman" (the body).</li>
+      <li><strong>Pañcāgni Vidyā:</strong> 5 cosmic fires — Heaven, Rain, Earth, Man, Woman. Wise (Devayana path → Brahma Loka). Ritualists only (Pitṛyāna path → rebirth).</li>
+      <li><strong>Indra-Virochana story:</strong> Materialism (Asura-buddhi) = identifying the physical body as the self. Indra goes back to Prajāpati 4 times over 101 years to learn the true spiritual Self.</li>
+    </ul>
+    <div class="shloka">स य एषोऽणिमैतदात्म्यमिदं सर्वं तत् सत्यं स आत्मा तत्त्वमसि श्वेतकेतो।
+<span class="iast">Sa ya eṣo'ṇimaitadātmyamidaṃ sarvaṃ tat satyaṃ sa ātmā tattvamasi śvetaketo |</span><span class="ref">Chāndogyopaniṣad 6.8.7</span></div>
+    <div class="shloka" style="margin-top:6px">सर्वं खल्विदं ब्रह्म तज्जलानिति शान्त उपासीत।
+<span class="ref">Chāndogyopaniṣad 3.14.1</span></div>
+    <div class="shloka" style="margin-top:6px">यत्र नान्यत् पश्यति नान्यच्छृणोति नान्यद्विजानाति स भूमा... यो वै भूमा तत्सुखं नाल्पे सुखमस्ति भूमैव सुखम्।
+<span class="ref">Chāndogyopaniṣad 7.23–24</span></div>
+  </div>
+
+  <div class="upd-card">
+    <div class="upd-header"><div class="upd-name">10. Bṛhadāraṇyaka Upaniṣad (बृहदारण्यकोपनिषद्)</div><div class="upd-veda">Śukla Yajurveda · Śatapatha Brāhmaṇa</div></div>
+    <div class="upd-facts">
+      <div class="upd-fact"><strong>Largest Upaniṣad</strong></div>
+      <div class="upd-fact"><strong>Mahāvākya</strong>Ahaṃ Brahmāsmi</div>
+      <div class="upd-fact"><strong>Key themes</strong>Neti Neti · Yājñavalkya · Gārgī · Maitreī · Da-Da-Da</div>
+    </div>
+    <ul class="blist">
+      <li><strong>Ahaṃ Brahmāsmi (1.4.10):</strong> "In the beginning this was Brahman alone. It knew itself — 'I am Brahman.' Therefore it became all." The foundational experience of non-duality.</li>
+      <li><strong>Neti Neti (2.3.6):</strong> Brahman is infinite and attribute-less → cannot be described positively. Only approach: "Not this, not this" — negate all limiting adjuncts. Yājñavalkya's method.</li>
+      <li><strong>Yājñavalkya–Maitreyī dialogue (2.4):</strong> "Everything is dear not for its own sake but for the sake of the Self (Ātman)." The Ātman alone must be seen, heard, reflected upon, meditated upon — Śravaṇa, Manana, Nididhyāsana.</li>
+      <li><strong>Gārgī–Yājñavalkya (3.8):</strong> Female scholar Gārgī asks about ultimate foundation of universe. Yājñavalkya reveals the Akṣara Brahman (the Imperishable) — by whose command sun, moon, seasons are regulated.</li>
+      <li><strong>Da-Da-Da (5.2):</strong> Prajāpati's single instruction "Da" to three types: Gods → Damyata (self-control). Humans → Datta (give in charity). Demons → Dayadhvam (show compassion).</li>
+      <li><strong>Jyotir-mīmāṃsā (4.3):</strong> King Janaka asks what is one's light when sun, moon, fire, speech have all quieted. Yājñavalkya: "The Self alone is one's light."</li>
+      <li><strong>Madhu Vidyā (2.5):</strong> Elements of nature are mutually beneficial like honey (Madhu). Behind all diversity = one immortal Self (Brahman).</li>
+    </ul>
+    <div class="shloka">तदात्मानमेवावेत् अहं ब्रह्मास्मीति। तस्मात्तत्सर्वमभवत्।
+<span class="ref">Bṛhadāraṇyakopaniṣad 1.4.10</span></div>
+    <div class="shloka" style="margin-top:6px">स एष नेति नेत्यात्मा।
+<span class="ref">Bṛhadāraṇyakopaniṣad 3.9.26</span></div>
+    <div class="shloka" style="margin-top:6px">न वा अरे पत्युः कामाय पतिः प्रियो भवत्यात्मनस्तु कामाय पतिः प्रियो भवति... आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यः।
+<span class="ref">Bṛhadāraṇyakopaniṣad 2.4.5</span></div>
+    <div class="shloka" style="margin-top:6px">तद्धैतद्देवी वागनुवदति स्तनयित्नुः — द-द-द — दाम्यत दत्त दयध्वमिति।
+<span class="ref">Bṛhadāraṇyakopaniṣad 5.2.3</span></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--maroon-mid);color:#4A0012">Quick Summary — All 10 Upaniṣads</div>
+  <div class="up-table">
+    <div class="up-row header"><div>Upaniṣad</div><div>Veda</div><div>Key Points</div></div>
+    <div class="up-row"><div class="up-name">Īśā<div class="devanagari">ईशावास्य</div></div><div class="up-veda">Śukla Yajurveda (40th ch.)</div><div>18 mantras · Nishkāma Karma · "Tena tyaktena bhuñjīthāḥ" · Vidyā-Avidyā synthesis</div></div>
+    <div class="up-row"><div class="up-name">Kena<div class="devanagari">केन</div></div><div class="up-veda">Sāmaveda (Jaiminīya)</div><div>4 khaṇḍas · Yakṣa story · Omnipotence of Brahman · Uma Haimavati reveals identity</div></div>
+    <div class="up-row"><div class="up-name">Kaṭha<div class="devanagari">कठ</div></div><div class="up-veda">Kṛṣṇa Yajurveda</div><div>Naciketa-Yama · 3 boons · Śreya vs Preya · Chariot metaphor · Soul is eternal</div></div>
+    <div class="up-row"><div class="up-name">Praśna<div class="devanagari">प्रश्न</div></div><div class="up-veda">Atharvaveda (Pippalāda)</div><div>6 sages · 6 questions · Rāyi-Prāṇa creation · 5 Prāṇas · OM meditation · 16-part Puruṣa</div></div>
+    <div class="up-row"><div class="up-name">Muṇḍaka<div class="devanagari">मुण्डक</div></div><div class="up-veda">Atharvaveda (Śaunaka)</div><div>Parā/Aparā Vidyā · Fragile boats · Spider/Birds metaphors · Satyameva Jayate · Jīvanmukti</div></div>
+    <div class="up-row"><div class="up-name">Māṇḍūkya<div class="devanagari">माण्डूक्य</div></div><div class="up-veda">Atharvaveda</div><div>12 mantras (shortest) · 4 states · OM=A+U+M · Turīya = Brahman · Advaita crown</div></div>
+    <div class="up-row"><div class="up-name">Taittirīya<div class="devanagari">तैत्तिरीय</div></div><div class="up-veda">Kṛṣṇa Yajurveda</div><div>3 Vallis · Convocation address · Pañcakoṣa · Bhṛgu-Varuṇa · Brahman = from which all are born</div></div>
+    <div class="up-row"><div class="up-name">Aitareya<div class="devanagari">ऐतरेय</div></div><div class="up-veda">Ṛgveda (Aitareya Āraṇyaka)</div><div>Prajñānaṃ Brahma · Creation sequence · 3 births of soul · Vidyṛti path · Vāmadeva in womb</div></div>
+    <div class="up-row"><div class="up-name">Chāndogya<div class="devanagari">छान्दोग्य</div></div><div class="up-veda">Sāmaveda</div><div>Tat Tvam Asi · Satyakāma Jābāla · Sarvam Brahma · Bhūma Vidyā · Dahara · Pañcāgni · Indra-Virochana</div></div>
+    <div class="up-row"><div class="up-name">Bṛhadāraṇyaka<div class="devanagari">बृहदारण्यक</div></div><div class="up-veda">Śukla Yajurveda (Śatapatha)</div><div>Largest · Ahaṃ Brahmāsmi · Neti Neti · Maitreī dialogue · Gārgī · Da-Da-Da · Jyotir-mīmāṃsā</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════ UNIT 4A: MAHĀPURĀṆAS ══════════════════ -->
+<div class="unit-section u4a" id="u4a">
+  <div class="unit-header">
+    <div class="unit-num">4A</div>
+    <div><h2>Mahāpurāṇas (महापुराणाः)</h2>
+    <p>18 Great Purāṇas — Mythology · Cosmology · Dynastic History · Bhakti · Philosophy</p></div>
+  </div>
+
+  <div class="hl purple">
+    <div class="hl-label">Key Facts</div>
+    <p><strong>Author:</strong> Mahāṛṣi Kṛṣṇa Dvaipāyana Vedavyāsa. <strong>Total Ślokas:</strong> 4,00,000. <strong>Largest:</strong> Skanda Purāṇa (81,000). <strong>First:</strong> Brahma Purāṇa (Ādi Purāṇa). Made Vedic knowledge accessible to women and all social classes.</p>
+    <div class="shloka">सर्गश्च प्रतिसर्गश्च वंशो मन्वन्तराणि च। वंशानुचरितं चैव पुराणं पञ्चलक्षणम्॥
+<span class="iast">Sargaśca pratisargaśca vaṃśo manvantarāṇi ca | Vaṃśānucaritaṃ caiva purāṇaṃ pañcalakṣaṇam ||</span>
+<span class="ref">Viṣṇupurāṇa 3.6.25 / Amarakośa</span></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--purple-mid);color:#28084A">Pañcalakṣaṇa — 5 Characteristics</div>
+  <div class="fc">
+    <div class="fc-title">Every true Mahāpurāṇa must contain all five</div>
+    <div class="fc-children" style="border-color:var(--purple);padding:10px">
+      <div class="fc-child"><strong>1. Sarga</strong>Primary creation — Brahma creates Universe from Brahman</div>
+      <div class="fc-child"><strong>2. Pratisarga</strong>Secondary recreation after cosmic dissolution (Pralaya/Mahāpralaya)</div>
+      <div class="fc-child"><strong>3. Vaṃśa</strong>Genealogy of gods and sages from creation onward</div>
+      <div class="fc-child"><strong>4. Manvantara</strong>14 Manu periods (~4.32 billion years each) — cosmic time cycles</div>
+      <div class="fc-child"><strong>5. Vaṃśānucārita</strong>Dynastic history of Solar (Sūrya) and Lunar (Chandra) royal lineages</div>
+    </div>
+  </div>
+
+  <div class="sec-div" style="background:var(--purple-mid);color:#28084A">All 18 Mahāpurāṇas</div>
+  <div class="pur-grid">
+    <div class="pur-card"><div class="pname">1. Viṣṇu Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>6 Aṃśas. Parāśara-Maitreya dialogue. Creation sequence: Brahman+Prakṛti+Kāla → Mahat → Ahaṃkāra. Best for dynastic history.</div></div>
+    <div class="pur-card"><div class="pname">2. Bhāgavata Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>12 Skandhas. 10th = Kṛṣṇa's full life. Navadha Bhakti (Śravaṇa, Kīrtana, etc.). Foundation of Vaiṣṇavism.</div></div>
+    <div class="pur-card"><div class="pname">3. Nārada Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>Vaiṣṇava dharma. Detailed description of 6 Vedāṅgas. Various Vratas.</div></div>
+    <div class="pur-card"><div class="pname">4. Garuḍa Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>Preta Khaṇḍa (afterlife/funeral rites). Karma-Vipāka (fruition of deeds). Āyurveda. Veterinary science for horses.</div></div>
+    <div class="pur-card"><div class="pname">5. Padma Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>5–7 Khaṇḍas. Pilgrimage glory. Rāma's life in Pātāla Khaṇḍa (post-Rāvaṇa events). Śāligrāma-Tulasī glory.</div></div>
+    <div class="pur-card"><div class="pname">6. Varāha Purāṇa</div><span class="ptag tag-sat">Sāttvika</span><div>Varāha avatar. Mathurā Māhātmya — all sins destroyed by bathing there. Viśrāma Ghaṭ, Govardhan.</div></div>
+    <div class="pur-card"><div class="pname">7. Brahma Purāṇa</div><span class="ptag tag-raj">Rājasika</span><div>ĀDI PURĀṆA (oldest). Jagannāth Purī (Puruṣottama Kṣetra, Odisha). Konāditya region (Konark). 12 names of Sun.</div></div>
+    <div class="pur-card"><div class="pname">8. Brahmāṇḍa Purāṇa</div><span class="ptag tag-raj">Rājasika</span><div>Lalitā Sahasranāma (Lalitā Tripurasundarī). Adhyātma Rāmāyaṇa in Uttara Khaṇḍa. Bhaṇḍāsura story.</div></div>
+    <div class="pur-card"><div class="pname">9. Brahma-vaivarta</div><span class="ptag tag-raj">Rājasika</span><div>Rādhā = Kṛṣṇa's Hlādinī Śakti (not just a Gopī). Goloka Rāsa Līlā. "Kṛṣṇastu Bhagavān svayam."</div></div>
+    <div class="pur-card"><div class="pname">10. Mārkaṇḍeya Purāṇa</div><span class="ptag tag-raj">Rājasika</span><div>Durgā Saptaśatī (Devī Māhātmyam, 13 chapters). Mahiṣāsura, Śumbha-Niśumbha slaying. Jaimini-Dharmabird dialogue.</div></div>
+    <div class="pur-card"><div class="pname">11. Bhaviṣya Purāṇa</div><span class="ptag tag-raj">Rājasika</span><div>Future dynasties (Nandas, Mauryas). Sun God worship. Maga Brāhmaṇas from Śakadvīpa (Persia). Sāmba's leprosy cured.</div></div>
+    <div class="pur-card"><div class="pname">12. Vāmana Purāṇa</div><span class="ptag tag-raj">Rājasika</span><div>Vāmana (dwarf) avatar. King Bali story — 3 paces cover the cosmos, Bali sent to Pātāla.</div></div>
+    <div class="pur-card"><div class="pname">13. Śiva Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>Śaivism. Śiva's various forms. Rudra worship.</div></div>
+    <div class="pur-card"><div class="pname">14. Liṅga Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>12 Jyotirliṅgas. Liṅgodbhava story — Śiva as endless pillar of fire; Brahmā and Viṣṇu could not find ends. Śiva = Supreme Brahman.</div></div>
+    <div class="pur-card"><div class="pname">15. Skanda Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>LARGEST (81,000 verses). Pilgrimage sites (Tīrtha-māhātmya). Kumbha Mela. Jagannāth Puri (Utkala Khaṇḍa).</div></div>
+    <div class="pur-card"><div class="pname">16. Agni Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>ENCYCLOPEDIA — Literature, Grammar, Āyurveda, Architecture, Military science, Statecraft, Poetics. "All sciences are here."</div></div>
+    <div class="pur-card"><div class="pname">17. Matsya Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>Matsya avatar (Manu-fish). Architecture: 20 temple types, 18 master architects. Rājadharma. Best for history + architecture.</div></div>
+    <div class="pur-card"><div class="pname">18. Kūrma Purāṇa</div><span class="ptag tag-tam">Tāmasika</span><div>Kūrma avatar. Īśvara Gītā (Śiva's Gītā — Sāṃkhya, Yoga, Viśvarūpa). Pāśupata Yoga.</div></div>
+  </div>
+
+  <div class="sec-div" style="background:var(--purple-mid);color:#28084A">Quick Reference Identifiers</div>
+  <ul class="blist">
+    <li><strong>Largest Purāṇa:</strong> Skanda Purāṇa (81,000 verses)</li>
+    <li><strong>First/Oldest:</strong> Brahma Purāṇa = Ādi Purāṇa</li>
+    <li><strong>Best for Bhakti:</strong> Bhāgavata Purāṇa (10th Skandha = Kṛṣṇa)</li>
+    <li><strong>Navadha Bhakti (9-fold devotion):</strong> Bhāgavata Purāṇa 7.5.23 — Śravaṇa, Kīrtana, Smaraṇa, Pādasevana, Arcana, Vandana, Dāsya, Sakhya, Ātmanivedana</li>
+    <li><strong>Encyclopedia:</strong> Agni Purāṇa ("Āgneye sarvā vidyāḥ…")</li>
+    <li><strong>Architecture:</strong> Matsya Purāṇa (20 temple types, 18 architects)</li>
+    <li><strong>Dynastic history:</strong> Matsya + Vāyu + Viṣṇu Purāṇas (most reliable)</li>
+    <li><strong>Lalitā Sahasranāma:</strong> Brahmāṇḍa Purāṇa · <strong>Durgā Saptaśatī:</strong> Mārkaṇḍeya Purāṇa</li>
+    <li><strong>Īśvara Gītā:</strong> Kūrma Purāṇa · <strong>Funeral rites:</strong> Garuḍa Purāṇa (Preta Khaṇḍa)</li>
+    <li><strong>Pāśupata Yoga:</strong> Vāyu Purāṇa (Śaiva tradition)</li>
+    <li><strong>Kali Yuga signs:</strong> Viṣṇu Purāṇa 6th Aṃśa — wealth = sole criterion of greatness, rulers become looters, Dharma declines</li>
+    <li><strong>Adhyātma Rāmāyaṇa:</strong> Brahmāṇḍa Purāṇa (Uttara Khaṇḍa)</li>
+    <li><strong>Jagannāth Puri (Puruṣottama Kṣetra):</strong> Brahma + Skanda Purāṇas</li>
+  </ul>
+</div>
+
+<!-- ══════════════════ UNIT 4B: UPAPURĀṆAS ══════════════════ -->
+<div class="unit-section u4b" id="u4b">
+  <div class="unit-header">
+    <div class="unit-num">4B</div>
+    <div><h2>Upapurāṇas (उपपुराणाः)</h2>
+    <p>18 Secondary Purāṇas — regional, sectarian, supplementary</p></div>
+  </div>
+  <div class="hl gold">
+    <div class="hl-label">Difference from Mahāpurāṇas</div>
+    <p><strong>Mahāpurāṇas:</strong> Pan-Indian, composed by Vedavyāsa, fully contain Pañcalakṣaṇa. <strong>Upapurāṇas:</strong> Secondary, composed by various sages (not exclusively Vyāsa), often regional, preserve local pilgrimage traditions and sectarian Śaiva/Vaiṣṇava/Śākta practices.</p>
+    <p style="margin-top:6px"><strong>Most Famous Upapurāṇa:</strong> Devī-Bhāgavata Purāṇa — glorifies the Divine Mother (Śakti tradition). Some scholars consider it a Mahāpurāṇa.</p>
+  </div>
+  <ul class="blist">
+    <li><strong>18 Upapurāṇas include:</strong> Sanatkumāra, Narasiṃha, Bṛhan-Nāradīya, Śiva-Dharma, Durvāsa, Kapila, Vāmana, Bhārgava, Varuṇa, Kālikā, Sāmba, Nandi, Sūrya, Parāśara, Vasiṣṭha, Devī-Bhāgavata, Gaṇeśa, Haṃsa</li>
+    <li><strong>Devī-Bhāgavata:</strong> 18,000 verses. 12 Skandhas. Full glorification of Śakti (Devī). Foundation of Śāktism.</li>
+    <li><strong>Significance:</strong> Preserve sectarian traditions, regional Tīrtha-māhātmyas, and local mythology not covered by Mahāpurāṇas.</li>
+  </ul>
+</div>
+
+<!-- ══════════════════ UNIT 5A: SMṚTIS ══════════════════ -->
+<div class="unit-section u5a" id="u5a">
+  <div class="unit-header">
+    <div class="unit-num">5A</div>
+    <div><h2>Smṛtis (स्मृतयः · Smṛtayaḥ)</h2>
+    <p>18 Law Books — codifying Dharma for society across the Yugas</p></div>
+  </div>
+
+  <div class="hl green">
+    <div class="hl-label">Śruti vs Smṛti + 4 Sources of Dharma</div>
+    <p><strong>Śruti</strong> = "heard" directly from God (Vedas) — highest authority. <strong>Smṛti</strong> = "remembered/recollected" tradition codified by sages — based on Śruti. In any conflict: <em>Śrutireva garīyasī</em> (Śruti always wins).</p>
+    <div class="shloka">वेदोऽखिलो धर्ममूलं स्मृतिशीले च तद्विदाम्। आचारश्चैव साधूनामात्मनस्तुष्टिरेव च॥
+<span class="iast">Vedo'khilo dharmamūlaṃ smṛtiśīle ca tadvidām | Ācāraścaiva sādhūnām ātmanastu ṣṭireva ca ||</span>
+<span class="ref">Manusmṛti 2.6</span></div>
+  </div>
+
+  <div class="fc">
+    <div class="fc-title">Which Smṛti for which Yuga?</div>
+    <div class="fc-row">
+      <div class="fc-box" style="background:var(--gold-light)"><strong>Satya Yuga</strong><br><em style="font-size:11px;font-weight:400">Manusmṛti</em></div>
+      <div class="fc-arrow">→</div>
+      <div class="fc-box" style="background:var(--blue-light)"><strong>Tretā Yuga</strong><br><em style="font-size:11px;font-weight:400">Gautama Smṛti</em></div>
+      <div class="fc-arrow">→</div>
+      <div class="fc-box" style="background:var(--maroon-light)"><strong>Dvāpara Yuga</strong><br><em style="font-size:11px;font-weight:400">Śaṅkha-Likhita</em></div>
+      <div class="fc-arrow">→</div>
+      <div class="fc-box" style="border-color:var(--green);border-width:2px;background:var(--green-light)"><strong>Kali Yuga ✓ Now</strong><br><em style="font-size:11px;font-weight:400">Parāśara Smṛti</em></div>
+    </div>
+    <div class="shloka" style="margin-top:10px">कृते तु मानवा धर्मास्त्रेतायां गौतमाः स्मृताः। द्वापरे शङ्खलिखिताः कलौ पाराशरी स्मृतः॥</div>
+  </div>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">All 18 Smṛtis — Key Details</div>
+  <div class="sm-grid">
+    <div class="sm-card"><div class="sname">1. Manusmṛti</div><div class="sauthor">Sage Manu · 12 chapters (Adhyāyas)</div>Oldest &amp; most authoritative. 16 Saṃskāras (Garbhādhāna → Antyeṣṭi). 8 types of marriage. Rājadharma (Ch.7): king = 8 divine elements. 18 Law Titles. Foundation of Hindu law.</div>
+    <div class="sm-card"><div class="sname">2. Yājñavalkya Smṛti</div><div class="sauthor">Yājñavalkya · 3 Kāṇḍas</div>Ācāra + Vyavahāra (civil/criminal law) + Prāyaścitta. More systematic than Manu. Basis of modern Hindu Law. Mitākṣarā commentary by Vijñāneśvara.</div>
+    <div class="sm-card"><div class="sname">3. Parāśara Smṛti</div><div class="sauthor">Sage Parāśara</div>For Kali Yuga — most lenient/flexible. Allows agriculture for Brāhmaṇas in crisis (Āpad-dharma). Simplifies atonements.</div>
+    <div class="sm-card"><div class="sname">4. Viṣṇu Smṛti</div><div class="sauthor">Prose/Gadya-Sūtra style (unique)</div>Framed as Viṣṇu-Earth (Pṛthvī) dialogue. 14 types of charity. Pilgrimage glory. Śrāddha rituals.</div>
+    <div class="sm-card"><div class="sname">5. Hārita Smṛti</div><div class="sauthor">Sage Hārita</div>Women's Vedic education supported! Two categories: Brahmavādinīs (lifelong Vedic scholars) &amp; Sadyovadhūs (who choose marriage). Historical proof of women's right to education.</div>
+    <div class="sm-card"><div class="sname">6. Bṛhaspati Smṛti</div><div class="sauthor">Bṛhaspati</div>Best for Vyavahāra (jurisprudence). 4 types of courts. Witness rules. Documentary evidence. Divine ordeals. Sophisticated legal framework.</div>
+    <div class="sm-card"><div class="sname">7. Kātyāyana Smṛti</div><div class="sauthor">Kātyāyana</div>Best for Strīdhana (women's property rights) — wealth received at marriage/gifts = wife's exclusive property, husband cannot claim it.</div>
+    <div class="sm-card"><div class="sname">8. Nārada Smṛti</div><div class="sauthor">Nārada</div>Exclusively a legal procedural code. Judge qualifications. Witness rules. Laws on slave emancipation. No conduct/atonement mix.</div>
+    <div class="sm-card"><div class="sname">9. Aṅgiras Smṛti</div><div class="sauthor">Aṅgiras</div>Primarily Prāyaścitta (atonement) — for major sins like cow slaughter, forbidden relationships. Purification methods.</div>
+    <div class="sm-card"><div class="sname">10. Atri Smṛti</div><div class="sauthor">Sage Atri</div>Dāna (charity), Japa (chanting), and Prāyaścitta. "Charity, charity, charity — results of charity."</div>
+    <div class="sm-card"><div class="sname">11. Yama Smṛti</div><div class="sauthor">Yama</div>Śrāddha rituals, Naraka (hells), punishments of afterlife. Detailed Pitṛ Yajña rules.</div>
+    <div class="sm-card"><div class="sname">12. Dakṣa Smṛti</div><div class="sauthor">Dakṣa</div>Householder stage (Gṛhastha Āśrama) superiority. Yoga and daily routine. "All other Āśramas depend on householder for survival."</div>
+    <div class="sm-card"><div class="sname">13. Saṃvarta Smṛti</div><div class="sauthor">Saṃvarta</div>Rules of Brahmacarya Āśrama (student life) in detail.</div>
+    <div class="sm-card"><div class="sname">14. Vyāsa Smṛti</div><div class="sauthor">Vyāsa</div>Varṇāśrama duties, Dāna, Vedānta knowledge. "Dharma, Artha, Kāma, Mokṣa."</div>
+    <div class="sm-card"><div class="sname">15. Uśanas Smṛti</div><div class="sauthor">Śukrācārya (son of Bhṛgu)</div>Origin of mixed castes (Saṃkarajāti) via Anuloma-Pratiloma marriages. Chandāla from Brāhmaṇī+Śūdra union.</div>
+    <div class="sm-card"><div class="sname">16. Śaṅkha-Likhita</div><div class="sauthor">Two brothers</div>Rule of Law above even the King. Famous story: Śaṅkha as judge ordered Likhita's (own brother's) hand cut off for minor theft → law is fully impartial.</div>
+    <div class="sm-card"><div class="sname">17. Āpastamba Smṛti</div><div class="sauthor">Āpastamba · Kṛṣṇa Yajurveda</div>Oldest surviving Dharmasūtra for Taittirīya tradition. Foundation of Dharmaśāstra.</div>
+    <div class="sm-card"><div class="sname">18. Gautama Smṛti</div><div class="sauthor">Gautama · Sāmaveda</div>Oldest surviving Dharmasūtra. 40 Saṃskāras. Property + inheritance + civil law basics.</div>
+  </div>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Legal Digests (Nibandhas) — Most Important</div>
+  <table class="gt th-g">
+    <thead><tr><th>Digest</th><th>Author + Century</th><th>Authority Region</th><th>Key Principle</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mitākṣarā</strong></td><td>Vijñāneśvara (11th C.) Commentary on Yājñavalkya Smṛti</td><td>All India except Bengal</td><td>Son gets right to ancestral property from <strong>BIRTH itself</strong> (Utpattyaivārthasvāmitvaṃ labhate)</td></tr>
+      <tr><td><strong>Dāyabhāga</strong></td><td>Jīmūtavāhana (12th C.)</td><td>Bengal &amp; Assam</td><td>Sons get right only <strong>AFTER father's death</strong> (Piturordhvaṃ putrāṇāṃ dāyadarśanam)</td></tr>
+      <tr><td><strong>Vyavahāra Māyūkha</strong></td><td>Nīlakaṇṭha Bhaṭṭa (part of Bhagavanta Bhāskara)</td><td>Maharashtra &amp; Gujarat</td><td>Western India legal authority for civil disputes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--green-mid);color:#0D3D1F">Key Concepts in Smṛtis</div>
+  <table class="gt th-g">
+    <thead><tr><th>Concept</th><th>Details (IAST)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>16 Saṃskāras</strong></td><td>From Garbhādhāna (conception) → Puṃsavana → Sīmantonnayana → Jātakarma → Nāmakaraṇa → Annaprāśana → Upanayana (sacred thread) → Vivāha (marriage) → Antyeṣṭi (funeral)</td></tr>
+      <tr><td><strong>8 Types of Marriage</strong></td><td>Brāhma (best — gift of daughter) → Daiva → Ārṣa → Prājāpatya → Āsura → Gāndharva → Rākṣasa → Paiśāca (worst — condemned)</td></tr>
+      <tr><td><strong>Āpad-dharma</strong></td><td>Temporary relaxation of class-rules during life-threatening crisis. Brāhmin may farm (Vaiśya) or fight (Kṣatriya). Once crisis ends, return to original duties.</td></tr>
+      <tr><td><strong>Mahāpātakas (5 Great Sins)</strong></td><td>Killing a Brāhmaṇa · Drinking liquor · Stealing gold · Corrupting guru's wife · Associating with the above</td></tr>
+      <tr><td><strong>Rājadharma (Manu Ch.7)</strong></td><td>King = created from 8 divine guardian deities. Primary duties: protect citizens, punish wicked, deliver impartial justice, uphold Varṇāśrama. "Daṇḍaḥ śāsti prajāḥ sarvāḥ."</td></tr>
+      <tr><td><strong>Sadācāra</strong></td><td>Veda-compliant ethical conduct practiced by noble people. "Sadbhir ācarito yaḥ syāt sa sadācāra ucyate."</td></tr>
+      <tr><td><strong>18 Law Titles (Vivāda Padāni)</strong></td><td>Recovery of debts · Deposits · Sales without ownership · Boundary disputes · Assault · Verbal abuse · Theft · Robbery · etc. (Manu Ch.8)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════ UNIT 5B: NĪTIŚĀSTRA ══════════════════ -->
+<div class="unit-section u5b" id="u5b">
+  <div class="unit-header">
+    <div class="unit-num">5B</div>
+    <div><h2>Nītiśāstra &amp; Nyāyaśāstra (नीतिशास्त्रम्)</h2>
+    <p>Statecraft · Political Science · Ethics · Logic — Arthaśāstra · Pañcatantra · Nyāya</p></div>
+  </div>
+
+  <div class="hl blue">
+    <div class="hl-label">Nītiśāstra — Definition</div>
+    <p>The science of polity, statecraft, ethics, and practical wisdom for governance and daily life. Two main pillars: <strong>Kauṭilya's Arthaśāstra</strong> (complete statecraft) and <strong>Viṣṇu Śarma's Pañcatantra</strong> (practical wisdom through stories). Compared to Machiavelli's <em>The Prince</em> — but more comprehensive and ethical.</p>
+  </div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Kauṭilya's Arthaśāstra</div>
+  <div class="hl blue">
+    <div class="hl-label">Overview</div>
+    <p><strong>Author:</strong> Kauṭilya = Cāṇakya = Viṣṇugupta. Minister to Candragupta Maurya. <strong>Structure:</strong> 15 Adhikaraṇas (books), 150 chapters, 180 sections. Rediscovered by R. Śāmāśāstrī in 1909 (a manuscript in Mysore).</p>
+  </div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Saptāṅga — Seven Elements of the State</div>
+  <div class="sp-grid">
+    <div class="sp-elem" style="background:var(--saffron-light);border:1.5px solid var(--saffron)"><span class="sp-icon">👑</span><strong>Rāja (Head)</strong><span>King — soul of state</span></div>
+    <div class="sp-elem" style="background:var(--blue-light);border:1.5px solid var(--blue)"><span class="sp-icon">👁️</span><strong>Amātya (Eyes)</strong><span>Ministers &amp; officials</span></div>
+    <div class="sp-elem" style="background:var(--green-light);border:1.5px solid var(--green)"><span class="sp-icon">🌍</span><strong>Janapada (Feet)</strong><span>Territory &amp; people</span></div>
+    <div class="sp-elem" style="background:var(--maroon-light);border:1.5px solid var(--maroon)"><span class="sp-icon">🏰</span><strong>Durga (Arms)</strong><span>Fort / defense</span></div>
+    <div class="sp-elem" style="background:var(--gold-light);border:1.5px solid var(--gold)"><span class="sp-icon">💰</span><strong>Kośa (Mouth)</strong><span>Treasury / revenue</span></div>
+    <div class="sp-elem" style="background:var(--purple-light);border:1.5px solid var(--purple)"><span class="sp-icon">⚔️</span><strong>Daṇḍa (Mind)</strong><span>Army / punishment</span></div>
+    <div class="sp-elem" style="background:var(--paper3);border:1.5px solid var(--border)"><span class="sp-icon">🤝</span><strong>Mitra (Ears)</strong><span>Ally / friendly king</span></div>
+  </div>
+  <div class="shloka">स्वाम्यमात्यजनपददुर्गकोशदण्डमित्राणि प्रकृतयः।
+<span class="iast">Svāmyamātyajanapadadurgakośadaṇḍamitrāṇi prakṛtayaḥ |</span>
+<span class="ref">Arthaśāstra 6.1 (Kauṭilya)</span></div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Arthaśāstra — Key Concepts</div>
+  <table class="gt th-b">
+    <thead><tr><th>Concept (IAST)</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ṣāḍguṇya</strong><br>(6 Foreign Policies)</td><td>Sandhi (Peace) · Vigraha (War) · Yāna (March) · Āsana (Neutrality) · Dvaidhībhāva (Double policy) · Saṃśraya (Alliance with strong king)</td></tr>
+      <tr><td><strong>Gūḍhapuruṣa</strong></td><td>Spy system — secret agents in various disguises (ascetics, merchants, entertainers). Gather intelligence, test minister loyalty, maintain order.</td></tr>
+      <tr><td><strong>King's Daily Routine</strong></td><td>Prescribed schedule: Dawn = receive ministers, plan policy. Midday = revenue administration. Evening = military inspection. Night = intelligence/rest.</td></tr>
+      <tr><td><strong>Minister Selection (Pareekṣā)</strong></td><td>Test ministers through 4 temptations: Dharma (religious persuasion) · Artha (financial bribery) · Kāma (lust) · Bhaya (fear). Only those who pass all 4 = ideal ministers.</td></tr>
+      <tr><td><strong>Economy</strong></td><td>Revenue from agriculture, trade, mines, forests. State builds reservoirs, roads. Foreign trade encouraged. "Treasury is the root of all state activities."</td></tr>
+      <tr><td><strong>Maṇḍala Theory</strong></td><td>"Enemy's enemy = friend." Concentric circles of neighboring states — guides alliance-building and war strategy.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Pañcatantra — Viṣṇu Śarma's 5 Books</div>
+  <div class="hl blue">
+    <div class="hl-label">Purpose &amp; Global Impact</div>
+    <p>Composed by Viṣṇu Śarma to teach Nītiśāstra to the dull princes of King Amaraśakti through engaging animal stories. <strong>Most widely translated Indian text after the Vedas</strong> — 50+ languages. Arabic = <em>Kalīla wa-Dimna</em> (8th century). Reached Europe as <em>Fables of Bidpai</em>.</p>
+  </div>
+  <div class="pt-grid">
+    <div class="pt-card"><div class="ptnum">Book 1</div><div class="ptname">Mitrabhedaḥ</div>How friends are separated — beware of those who sow division. Story of Lion, Bull, and two jackals (Damanaka, Karaṭaka).</div>
+    <div class="pt-card"><div class="ptnum">Book 2</div><div class="ptname">Mitrasampraptiḥ</div>Gaining unlikely friends — cooperation overcomes obstacles. Story of Crow, Mouse, Deer, and Tortoise (Laghupatanikā, Hiraṇyaka, Citrāṅga, Mantharaka).</div>
+    <div class="pt-card"><div class="ptnum">Book 3</div><div class="ptname">Kākol-ūkīyam</div>War between crows and owls — strategy, intelligence, deception in conflict. Enemy within is most dangerous.</div>
+    <div class="pt-card"><div class="ptnum">Book 4</div><div class="ptname">Labdhapranāśaḥ</div>Loss of what is gained — do not lose through greed what you have already secured.</div>
+    <div class="pt-card"><div class="ptnum">Book 5</div><div class="ptname">Aparīkṣitakārakaḥ</div>Rash action without thinking — think before acting; the Brāhmin who killed the mongoose story.</div>
+  </div>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Other Nītiśāstra Texts</div>
+  <ul class="blist">
+    <li><strong>Śukranīti (Nīti Prakāśikā):</strong> By Śukrācārya — kingship, economy, army, punishment. Includes 4-fold classification of weapons (Mukta, Amukta, Muktāmukta, Yantramukta).</li>
+    <li><strong>Kāmandakīya Nītisāra:</strong> By Kāmandaka — based on Arthaśāstra. 20 cantos. Poetic exposition of statecraft.</li>
+    <li><strong>Hitopadeśa:</strong> By Nārāyaṇa Paṇḍita — similar to Pañcatantra. 4 books. Very popular in Bengal. More focused on practical friendship.</li>
+    <li><strong>Cāṇakya Nīti:</strong> Aphoristic sayings of Kauṭilya on practical wisdom for daily life, kingship, human nature.</li>
+    <li><strong>Nītiśataka:</strong> By Bhartṛhari — 100 verses on practical ethics for all humans (not just kings).</li>
+  </ul>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Nyāyaśāstra (Unit 5C) — Logic &amp; Epistemology</div>
+  <div class="hl blue">
+    <div class="hl-label">Nyāya System — Founded by Sage Gautama</div>
+    <p><strong>Nyāya Sūtras</strong> by Gautama = foundational text. Subject = <em>Tarka</em> (logic), <em>Pramāṇa</em> (valid knowledge), and <em>Vāda</em> (debate). Goal = attain liberation through correct knowledge.</p>
+    <p style="margin-top:6px"><strong>4 Pramāṇas (valid sources of knowledge):</strong></p>
+  </div>
+  <table class="gt th-b">
+    <thead><tr><th>Pramāṇa (IAST)</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Pratyakṣa</strong></td><td>Direct Perception</td><td>Seeing fire with one's own eyes</td></tr>
+      <tr><td><strong>Anumāna</strong></td><td>Inference</td><td>Seeing smoke, inferring fire (Parvate vahnir dhūmāt)</td></tr>
+      <tr><td><strong>Upamāna</strong></td><td>Comparison/Analogy</td><td>"A Gavaya looks like a cow" — recognizing it from description</td></tr>
+      <tr><td><strong>Śabda</strong></td><td>Verbal Testimony</td><td>Knowledge from a reliable (Āpta) authority or scripture</td></tr>
+    </tbody>
+  </table>
+  <ul class="blist">
+    <li><strong>Anumāna — 5-part inference (Pañcāvayava):</strong> Pratijñā (claim: "The hill has fire") · Hetu (reason: "because of smoke") · Udāharaṇa (example: "wherever there is smoke, there is fire, like a kitchen") · Upanaya (application: "the hill has smoke") · Nigamana (conclusion: "therefore the hill has fire")</li>
+    <li><strong>16 Padārthas of Nyāya:</strong> Pramāṇa · Prameya · Saṃśaya · Prayojana · Dṛṣṭānta · Siddhānta · Avayava · Tarka · Nirṇaya · Vāda · Jalpa · Vitaṇḍā · Hetvābhāsa · Chala · Jāti · Nigrahasthāna</li>
+    <li><strong>Key texts:</strong> Nyāya Sūtras (Gautama) · Nyāyabhāṣya (Vātsyāyana) · Nyāyavārttika (Uddyotakara) · Tattvacintāmaṇi (Gaṅgeśa — Navya-Nyāya school)</li>
+    <li><strong>Navya-Nyāya:</strong> Founded by Gaṅgeśa Upādhyāya (12–13th century) — more rigorous, technical logical analysis; influenced Indian and Western logic.</li>
+  </ul>
+
+  <div class="sec-div" style="background:var(--blue-mid);color:#0D2040">Jurisprudence in Smṛtis (Nīti Grantha aspect)</div>
+  <ul class="blist">
+    <li><strong>Manusmṛti Ch.8:</strong> 18 Titles of Law (Vivāda Padāni): recovery of debts, deposits, sales without ownership, assault, verbal abuse, theft, robbery, boundary disputes, etc.</li>
+    <li><strong>Yājñavalkya Smṛti — Vyavahāra Kāṇḍa:</strong> Most systematic civil/criminal law. Loans, inheritance, border disputes, women's property. Foundation of modern Hindu Law.</li>
+    <li><strong>Nārada Smṛti:</strong> Exclusively legal code. Judge qualifications: Śrotriya (Vedic scholar), noble lineage, impartial, knowledgeable in all Śāstras.</li>
+    <li><strong>Bṛhaspati Smṛti:</strong> 4 types of courts — Kulaṃ (family council), Śreṇī (guild), Gaṇa (assembly), Adhikṛta (king's court). Evidence = Likhita (written documents) + Bhukti (possession) + Sākṣiṇaḥ (witnesses).</li>
+    <li><strong>Kātyāyana Smṛti — Strīdhana definition:</strong> "Wealth received at marriage from parents, in-laws, husband, or brothers is Strīdhana — her exclusive property." (Husband cannot claim it.)</li>
+  </ul>
+</div>
+
+<div style="background:var(--ink);color:rgba(255,255,255,.55);text-align:center;padding:18px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.04em">
+  IKS Paper 3 — Indian Literature · Complete Study Guide · Dr. Joshi Santosh Kumar · All Units · All Answers · IAST Diacritics · Devanāgarī Ślokas
+</div>
+</body>
+</html>
